@@ -27,7 +27,7 @@ pkgTest <- function(pkg){
 # ex: stringr
 # lapply(c("stringr"),  pkgTest)
 
-lapply(c(),  pkgTest)
+lapply(c("stringr"),  pkgTest)
 
 # set wd for current folder
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
@@ -39,10 +39,22 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 set.seed(123)
 # create empirical distribution of observed data
-ECDF <- ecdf(data)
-empiricalCDF <- ECDF(data)
+
+data1 <- rcauchy(1000, location = 0, scale = 1)
+
+ECDF <- ecdf(data1)
+empiricalCDF <- ECDF(data1)
 # generate test statistic
-D <- max(abs(empiricalCDF - pnorm(data)))
+D <- max(abs(empiricalCDF - pnorm(data1)))
+D
+# test statistic D =  0.1347281
+
+# p-value 
+PV <- 1-pnorm(-abs(D))
+PV
+
+# p-value is 0.554, which is larger than 0.05. we cannot reject the hypothesis 
+# that the empirical distribution matches the queried theoretical distribution
 
 #####################
 # Problem 2
@@ -51,3 +63,20 @@ D <- max(abs(empiricalCDF - pnorm(data)))
 set.seed (123)
 data <- data.frame(x = runif(200, 1, 10))
 data$y <- 0 + 2.75*data$x + rnorm(200, 0, 1.5)
+
+lm_test <- lm(y ~ x, data = data)
+lm_test$coefficients
+
+linear.lik <- function(theta, y, X){
+  n <- nrow(X) 
+  k <- ncol(X)  
+  beta <- theta[1 : k]  
+  sigma2 <- theta[k + 1]^2  
+  e <- y - X%*%beta
+  logl <- -.5*n*log(2*pi) -.5*n*log(sigma2) - ((t(e) %*%                                                  e ) / ( 2 * sigma2 ) )
+  return(-logl)}
+
+linear.MLE <- optim(fn=linear.lik, par=c(1, 1, 1), hessian =TRUE, y =data$y, X= cbind (1 ,data$x), method = "BFGS")
+linear.MLE$par
+
+# the coefficients for X in both models are roughly equal to 2.727
