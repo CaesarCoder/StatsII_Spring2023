@@ -38,6 +38,8 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 #####################
 
 set.seed(123)
+
+
 # create empirical distribution of observed data
 
 data1 <- rcauchy(1000, location = 0, scale = 1)
@@ -49,9 +51,19 @@ D <- max(abs(empiricalCDF - pnorm(data1)))
 D
 # test statistic D =  0.1347281
 
+# create a randomly distributed data (size: 1000): 
+data_norm <- rnorm(1000, mean=500, sd=5)
+
 # p-value 
-PV <- 1-pnorm(-abs(D))
-PV
+ks_test1 <- ks.test(data1, "pnorm")
+PV1 <- ks_test1$p.value
+PV1
+
+ks_test2 <- ks.test(data1, data_norm)
+PV2 <- ks_test2$p.value
+PV2
+
+# Get the ks.test() here: https://www.statology.org/kolmogorov-smirnov-test-r/ 
 
 # p-value is 0.554, which is larger than 0.05. we cannot reject the hypothesis 
 # that the empirical distribution matches the queried theoretical distribution
