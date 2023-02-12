@@ -36,9 +36,8 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 #####################
 # Problem 1
 #####################
-
+library("stargazer")
 set.seed(123)
-
 
 # create empirical distribution of observed data
 
@@ -51,22 +50,23 @@ D <- max(abs(empiricalCDF - pnorm(data1)))
 D
 # test statistic D =  0.1347281
 
+# p-value calculation: method 1: 
+ks_test1 <- ks.test(data1, "pnorm")
+ks_test1$p.value
+# p vluae is very close to 0
+
+# p-value calculation: method 2:
 # create a randomly distributed data (size: 1000): 
 data_norm <- rnorm(1000, mean=500, sd=5)
 
-# p-value 
-ks_test1 <- ks.test(data1, "pnorm")
-PV1 <- ks_test1$p.value
-PV1
-
 ks_test2 <- ks.test(data1, data_norm)
-PV2 <- ks_test2$p.value
-PV2
+ks_test2$p.value
+# p-value is 0 
 
 # Get the ks.test() here: https://www.statology.org/kolmogorov-smirnov-test-r/ 
 
-# p-value is 0.554, which is larger than 0.05. we cannot reject the hypothesis 
-# that the empirical distribution matches the queried theoretical distribution
+# p-value is roughly 0 by using both methods. Therefore, we can reject the hypothesis 
+# that the empirical distribution does not match the queried theoretical distribution.
 
 #####################
 # Problem 2
@@ -77,7 +77,9 @@ data <- data.frame(x = runif(200, 1, 10))
 data$y <- 0 + 2.75*data$x + rnorm(200, 0, 1.5)
 
 lm_test <- lm(y ~ x, data = data)
-lm_test$coefficients
+lm_test$coefficients  # roughly 2.73
+stargazer(lm_test, title="linear regression Results, method 1")
+
 
 linear.lik <- function(theta, y, X){
   n <- nrow(X) 
@@ -89,6 +91,6 @@ linear.lik <- function(theta, y, X){
   return(-logl)}
 
 linear.MLE <- optim(fn=linear.lik, par=c(1, 1, 1), hessian =TRUE, y =data$y, X= cbind (1 ,data$x), method = "BFGS")
-linear.MLE$par
+linear.MLE$par # coefficient is roughly equal to 2.73
 
-# the coefficients for X in both models are roughly equal to 2.727
+# the coefficients for X in both models are roughly equal to 2.73
