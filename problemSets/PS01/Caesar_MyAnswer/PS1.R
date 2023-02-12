@@ -78,7 +78,7 @@ data$y <- 0 + 2.75*data$x + rnorm(200, 0, 1.5)
 
 lm_test <- lm(y ~ x, data = data)
 lm_test$coefficients  # roughly 2.73
-stargazer(lm_test, title="linear regression Results, method 1")
+stargazer(lm_test, title="linear regression Results")
 
 
 linear.lik <- function(theta, y, X){
@@ -92,5 +92,5 @@ linear.lik <- function(theta, y, X){
 
 linear.MLE <- optim(fn=linear.lik, par=c(1, 1, 1), hessian =TRUE, y =data$y, X= cbind (1 ,data$x), method = "BFGS")
 linear.MLE$par # coefficient is roughly equal to 2.73
-
+stargazer(linear.MLE, title="MLE Results")
 # the coefficients for X in both models are roughly equal to 2.73
