@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.14)  12 FEB 2023 20:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.14)  12 FEB 2023 20:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -870,6 +870,15 @@ File: l3backend-pdftex.def 2022-08-30 L3 backend support: PDF output (pdfTeX)
 
 LaTeX Warning: Label `' multiply defined.
 
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
 )
 \openout1 = `PS1_Tianxin_Zhang_21352232.aux'.
 
@@ -984,7 +993,7 @@ ged.
 Here is how much of TeX's memory you used:
  27121 strings out of 475389
  482574 string characters out of 2776528
- 1182865 words of memory out of 3000000
+ 1181865 words of memory out of 3000000
  47933 multiletter control sequences out of 15000+600000
  480045 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1007,7 +1016,7 @@ ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Caesar/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Caesar/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Caesar/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on PS1_Tianxin_Zhang_21352232.pdf (4 pages, 187522 bytes).
+Output written on PS1_Tianxin_Zhang_21352232.pdf (4 pages, 187602 bytes).
 PDF statistics:
  185 PDF objects out of 1000 (max. 8388607)
  67 named destinations out of 1000 (max. 500000)
