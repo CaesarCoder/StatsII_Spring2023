@@ -39,6 +39,9 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 # load data
 load(url("https://github.com/ASDS-TCD/StatsII_Spring2023/blob/main/datasets/climateSupport.RData?raw=true"))
 
+
+
+# Question 1: Additive Model 
 library(stargazer)
 
 mod1 <- glm(choice ~ countries  + sanctions, data = climateSupport,
@@ -46,6 +49,35 @@ mod1 <- glm(choice ~ countries  + sanctions, data = climateSupport,
 summary(mod1)
 stargazer(mod1, title="Addictive Model")
 
+
+mod_null <- glm(choice ~ 1, family = binomial(link = "logit") , data = climateSupport)
+
+CST <- anova(mod1, mod_null, test = "LRT")
+stargazer(CST, title = "Chi-Square Test")
+
+cL <- exp(0.458)
+cL
+cQ <- exp(-0.010)  # p > 0.05
+sL <- exp(-0.276)
+sQ <- exp(-0.181)
+sC <- exp(0.150)
+
+
+itc <- exp(-0.006)
+itc
+
+## Get exp() here: https://www.educative.io/answers/how-to-calculate-the-natural-exponential-in-r-using-exp
+
+# Ha: at least one coefficient is not 0. 
+
+# we can deny the null hypothesis that all coefficients equal to 0, and we can conclude that at least one predictor is reliable. 
+
+
+# Question 2: 
+
+# a) 
+
+# c) Interaction Model or not?
 
 mod2 <- glm(choice ~ countries  + sanctions + countries:sanctions, data = climateSupport,
             family =  binomial(link = "logit"))
