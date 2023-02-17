@@ -46,12 +46,9 @@ mod1 <- glm(choice ~ countries  + sanctions, data = climateSupport,
 summary(mod1)
 stargazer(mod1, title="Addictive Model")
 
-judge_model <- glm(choice ~ countries* sanctions, family = binomial(link = "logit"), data = climateSupport)
-summary(judge_model)
-
 
 mod2 <- glm(choice ~ countries  + sanctions + countries:sanctions, data = climateSupport,
-            family = "binomial")
+            family =  binomial(link = "logit"))
 summary(mod2)
 stargazer(linear.MLE, title="Interactive Model")
 
