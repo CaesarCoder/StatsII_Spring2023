@@ -38,3 +38,25 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 # load data
 load(url("https://github.com/ASDS-TCD/StatsII_Spring2023/blob/main/datasets/climateSupport.RData?raw=true"))
+
+library(stargazer)
+
+mod1 <- glm(choice ~ countries  + sanctions, data = climateSupport,
+            family = "binomial")
+summary(mod1)
+stargazer(mod1, title="Addictive Model")
+
+judge_model <- glm(choice ~ countries* sanctions, family = binomial(link = "logit"), data = climateSupport)
+summary(judge_model)
+
+
+mod2 <- glm(choice ~ countries  + sanctions + countries:sanctions, data = climateSupport,
+            family = "binomial")
+summary(mod2)
+stargazer(linear.MLE, title="Interactive Model")
+
+
+
+anova(mod1, mod2, test="LRT")
+# p-value is 0.3912
+# no significant difference between the two models 
