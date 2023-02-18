@@ -111,5 +111,5 @@ stargazer(mod2, title="Interactive Model")
 
 test2 <- anova(mod1, mod2, test="LRT")
 stargazer(test2, title="Test: Interactive Model or not")
-# p-value is 0.3912
+# p-value is 0.391
 # no significant difference between the two models 
