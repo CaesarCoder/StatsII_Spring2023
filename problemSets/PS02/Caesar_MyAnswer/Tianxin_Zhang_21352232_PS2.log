@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.14)  18 FEB 2023 22:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.14)  18 FEB 2023 22:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./PS2.tex
-(PS2.tex
+**./Tianxin_Zhang_21352232_PS2.tex
+(Tianxin_Zhang_21352232_PS2.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-08-30>
 (C:\Users\Caesar\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -866,7 +866,7 @@ ftex.def
 File: l3backend-pdftex.def 2022-08-30 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count336
 \l__pdf_internal_box=\box76
-) (PS2.aux
+) (Tianxin_Zhang_21352232_PS2.aux
 
 LaTeX Warning: Label `' multiply defined.
 
@@ -877,7 +877,7 @@ LaTeX Warning: Label `' multiply defined.
 LaTeX Warning: Label `' multiply defined.
 
 )
-\openout1 = `PS2.aux'.
+\openout1 = `Tianxin_Zhang_21352232_PS2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
 LaTeX Font Info:    ... okay on input line 68.
@@ -936,9 +936,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Package xypdf Info: Line width: 0.47998pt on input line 68.
 Package hyperref Info: Link coloring OFF on input line 68.
 
-(PS2.out) (PS2.out)
+(Tianxin_Zhang_21352232_PS2.out) (Tianxin_Zhang_21352232_PS2.out)
 \@outlinefile=\write7
-\openout7 = `PS2.out'.
+\openout7 = `Tianxin_Zhang_21352232_PS2.out'.
 
 \c@lstlisting=\count343
 
@@ -1038,21 +1038,22 @@ $
 
 (PS2.R
 consecutive:
-[5] [6]) [7] (PS2.aux)
+[5] [6]) [7] (Tianxin_Zhang_21352232_PS2.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `PS2.out' has not changed.
+Package rerunfilecheck Info: File `Tianxin_Zhang_21352232_PS2.out' has not chan
+ged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27110 strings out of 475389
- 482158 string characters out of 2776528
- 1122486 words of memory out of 3000000
+ 27111 strings out of 475389
+ 482621 string characters out of 2776528
+ 1122532 words of memory out of 3000000
  47904 multiletter control sequences out of 15000+600000
  480352 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,10n,89p,3237b,2817s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 84i,10n,89p,3260b,2817s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\Caesar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcr
 m1000.pk> <C:\Users\Caesar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
 600\tcrm1200.pk><C:/Users/Caesar/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -1070,7 +1071,7 @@ ublic/amsfonts/cm/cmsy10.pfb><C:/Users/Caesar/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Caesar/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Caesar/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on PS2.pdf (7 pages, 183646 bytes).
+Output written on Tianxin_Zhang_21352232_PS2.pdf (7 pages, 183783 bytes).
 PDF statistics:
  207 PDF objects out of 1000 (max. 8388607)
  81 named destinations out of 1000 (max. 500000)

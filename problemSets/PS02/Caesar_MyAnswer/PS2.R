@@ -50,42 +50,66 @@ summary(mod1)
 stargazer(mod1, title="Addictive Model")
 
 
+# transfer log odds ratios to odds ratios 
+itc <- exp(-0.006)
+itc
+
+cL <- exp(0.458)
+cL
+
+cQ <- exp(-0.010)  # p > 0.05
+cQ
+
+sL <- exp(-0.276)
+sL
+
+sQ <- exp(-0.181)
+sQ
+
+sC <- exp(0.150)
+sC
+
+
+## Get exp() here: https://www.educative.io/answers/how-to-calculate-the-natural-exponential-in-r-using-exp
+
+
+#H0: All the coefficients are 0. 
+# Ha: at least one coefficient is not 0. 
+
 mod_null <- glm(choice ~ 1, family = binomial(link = "logit") , data = climateSupport)
 
 CST <- anova(mod1, mod_null, test = "LRT")
 stargazer(CST, title = "Chi-Square Test")
 
-cL <- exp(0.458)
-cL
-cQ <- exp(-0.010)  # p > 0.05
-sL <- exp(-0.276)
-sQ <- exp(-0.181)
-sC <- exp(0.150)
-
-
-itc <- exp(-0.006)
-itc
-
-## Get exp() here: https://www.educative.io/answers/how-to-calculate-the-natural-exponential-in-r-using-exp
-
-# Ha: at least one coefficient is not 0. 
-
 # we can deny the null hypothesis that all coefficients equal to 0, and we can conclude that at least one predictor is reliable. 
+
+
+
 
 
 # Question 2: 
 
-# a) 
+# a) # odds change 
+
+odds_change <- exp(-0.181) - exp(-0.276)
+odds_change # 0.07562243
+
+# b) # probability 
+logit_ns_80 <- -0.181 - 0.006
+
+prob_perc <- exp(logit_ns_80)/(1+exp(logit_ns_80))*100
+prob_perc  # 45.34% 
 
 # c) Interaction Model or not?
 
 mod2 <- glm(choice ~ countries  + sanctions + countries:sanctions, data = climateSupport,
             family =  binomial(link = "logit"))
 summary(mod2)
-stargazer(linear.MLE, title="Interactive Model")
+stargazer(mod2, title="Interactive Model")
 
 
 
-anova(mod1, mod2, test="LRT")
+test2 <- anova(mod1, mod2, test="LRT")
+stargazer(test2, title="Test: Interactive Model or not")
 # p-value is 0.3912
 # no significant difference between the two models 

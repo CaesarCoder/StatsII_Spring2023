@@ -91,7 +91,7 @@ model.matrix( ~ unique(nsibs), data = graduation) # I see a problem with the dat
 # probably not the best approach...
 model.matrix( ~ as.factor(unique(nsibs)), data = graduation)
 
-# A better function to help with this is expand.grid()
+# A better function to help with this is expand.grid()  ## 列出所有组合可能性
 with(graduation, expand.grid(nonwhite = unique(nonwhite),
                              mhs = unique(mhs),
                              fhs = unique(fhs)))
@@ -145,3 +145,4 @@ ggplot(data = confMod3, mapping = aes(x = row.names(confMod3), y = coefs)) +
   coord_flip() +
   scale_y_continuous(breaks = seq(0,8,1)) +
   labs(x = "Terms", y = "Coefficients")
+

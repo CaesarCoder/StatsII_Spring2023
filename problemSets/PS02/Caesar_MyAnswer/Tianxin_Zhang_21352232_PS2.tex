@@ -62,7 +62,7 @@
 
 \title{Problem Set 2}
 \date{Due: February 19, 2023}
-\author{Applied Stats II}
+\author{Tianxin Zhang \ 21352232 \ Applied Stats II}
 
 
 \begin{document}
@@ -157,6 +157,28 @@
 		\end{tabular} 
 	\end{table} 
 
+\underline{Interpretation of Model}: \\
+\lstinputlisting[language=R, firstline=46, lastline=74]{PS2.R}
+
+When there are only 20 countries participating and none sanctions are applied, the odds of recipients to support the climate policy is 0.994 times of the odds of recipients against the policy.\\
+
+Holding other explanatory variables constant, when there are 80 countries participating, the odds of recipient supporting the climate policy are 1.581 times of the odds of recipients against the policy. The p-value of this coefficient is lower than 0.01. Therefore, we can deny the null hypothesis that there is no correlation between the log odds of supporting climate policy and the condition that there are 80 countries participating. \\ 
+
+Holding other explanatory variables constant, when there are 160 countries participating, the odds of recipient supporting the climate policy are 0.990 times of the odds of recipients against the policy. The p-value of this coefficient is higher than 0.1. Therefore, we cannot deny the null hypothesis that there is no correlation between the log odds of supporting climate policy and the condition that there are 160 countries participating.\\
+
+Holding other explanatory variables constant, when there is a sanction of 5\% of the monthly household costs given 2\% GDP growth for missing emission reduction targets, the odds of recipient supporting the climate policy are 0.759 times of the odds of recipients against the policy. The p-value of this coefficient is lower than 0.01. Therefore, we can deny the null hypothesis that there is no correlation between the log odds of supporting climate policy and the condition that there is a sanction of 5\% of the monthly household costs given 2\% GDP growth for missing emission reduction targets.\\
+
+Holding other explanatory variables constant, when there is a sanction of 15\% of the monthly household costs given 2\% GDP growth for  missing emission reduction targets, the odds of recipient supporting the climate policy are 0.834 times of the odds of recipients against the policy. The p-value of this coefficient is lower than 0.01. Therefore, we can deny the null hypothesis that there is no correlation between the log odds of supporting climate policy and the condition that there is a sanction of 15\% of the monthly household costs given 2\% GDP growth for missing emission reduction targets.\\
+
+Holding other explanatory variables constant, when there is a sanction of 20\% of the monthly household costs given 2\% GDP growth for  missing emission reduction targets, the odds of recipient supporting the climate policy are 1.162 times of the odds of recipients against the policy. The p-value of this coefficient is lower than 0.01. Therefore, we can deny the null hypothesis that there is no correlation between the log odds of supporting climate policy and the condition that there is a sanction of 20\% of the monthly household costs given 2\% GDP growth for missing emission reduction targets.\\
+
+
+\underline{Testing the Coefficients}\\
+
+Null Hypothesis: All the coefficients are 0.\\ 
+Alternative Hypothesis: at least one coefficient is not 0.\\ 
+
+\lstinputlisting[language=R, firstline=76, lastline=84]{PS2.R}
 % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
 % Date and time: Fri, Feb 17, 2023 - 15:06:07
 \begin{table}[!htbp] \centering 
@@ -176,12 +198,6 @@
 	\end{tabular} 
 \end{table} 
 
-Interpretation:\\
-Holding other explanatory variables constant, when there are only 20 countries participating and none sanctions are applied, the odds of recipients to support the climate policy is 0.994.\\
-
-Holding other explanatory variables constant, when there are 80 countries participating and none sanctions are applied, the odds of recipient to support the climate policy are 1.581 times of the odds of when there are only 20 countries participating and none sanctions are applied.\\ 
-
-
 	\item
 	If any of the explanatory variables are significant in this model, then:
 	\begin{enumerate}
@@ -189,12 +205,105 @@ Holding other explanatory variables constant, when there are 80 countries partic
 		For the policy in which nearly all countries participate [160 of 192], how does increasing sanctions from 5\% to 15\% change the odds that an individual will support the policy? (Interpretation of a coefficient)
 %		\item
 %		For the policy in which very few countries participate [20 of 192], how does increasing sanctions from 5\% to 15\% change the odds that an individual will support the policy? (Interpretation of a coefficient)
+        \lstinputlisting[language=R, firstline=92, lastline=96]{PS2.R}
+        The times of odds of recipients supporting the climate policy against the odds of recipients against the policy changes by 0.076. 
 		\item
 		What is the estimated probability that an individual will support a policy if there are 80 of 192 countries participating with no sanctions? 
+		\lstinputlisting[language=R, firstline=97, lastline=102]{PS2.R}
+		
+		The probability of recipients supporting the policy with given condition is 45.34%. 
+		
 		\item
 		Would the answers to 2a and 2b potentially change if we included the interaction term in this model? Why? 
 		\begin{itemize}
-			\item Perform a test to see if including an interaction is appropriate.
+			\item Perform a test to see if including an interaction is appropriate.\\
+			First, let's create a model with interaction. See below:
+			\lstinputlisting[language=R, firstline=103, lastline=110]{PS2.R}
+			% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+			% Date and time: Sat, Feb 18, 2023 - 21:46:39
+			\begin{table}[!htbp] \centering 
+				\caption{Interactive Model} 
+				\label{} 
+				\begin{tabular}{@{\extracolsep{5pt}}lc} 
+					\\[-1.8ex]\hline 
+					\hline \\[-1.8ex] 
+					& \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+					\cline{2-2} 
+					\\[-1.8ex] & choice \\ 
+					\hline \\[-1.8ex] 
+					countries.L & 0.457$^{***}$ \\ 
+					& (0.038) \\ 
+					& \\ 
+					countries.Q & $-$0.011 \\ 
+					& (0.038) \\ 
+					& \\ 
+					sanctions.L & $-$0.274$^{***}$ \\ 
+					& (0.044) \\ 
+					& \\ 
+					sanctions.Q & $-$0.182$^{***}$ \\ 
+					& (0.044) \\ 
+					& \\ 
+					sanctions.C & 0.153$^{***}$ \\ 
+					& (0.044) \\ 
+					& \\ 
+					countries.L:sanctions.L & $-$0.002 \\ 
+					& (0.077) \\ 
+					& \\ 
+					countries.Q:sanctions.L & 0.134$^{*}$ \\ 
+					& (0.076) \\ 
+					& \\ 
+					countries.L:sanctions.Q & $-$0.008 \\ 
+					& (0.076) \\ 
+					& \\ 
+					countries.Q:sanctions.Q & 0.093 \\ 
+					& (0.076) \\ 
+					& \\ 
+					countries.L:sanctions.C & 0.095 \\ 
+					& (0.076) \\ 
+					& \\ 
+					countries.Q:sanctions.C & 0.010 \\ 
+					& (0.077) \\ 
+					& \\ 
+					Constant & $-$0.004 \\ 
+					& (0.022) \\ 
+					& \\ 
+					\hline \\[-1.8ex] 
+					Observations & 8,500 \\ 
+					Log Likelihood & $-$5,780.983 \\ 
+					Akaike Inf. Crit. & 11,585.970 \\ 
+					\hline 
+					\hline \\[-1.8ex] 
+					\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+				\end{tabular} 
+			\end{table} 
+		Then, let's conduct a significance for different coefficients.\\
+		$ H_{0}: B_{sacntions|20 countries} = B_{sacntions|80 countries} = B_{sacntions|160 countries}\\
+		 H_{a}: Effect of sacntions on receipients' supporting cliamte policy is different by the number of countries participating.$
+		
+	    \lstinputlisting[language=R, firstline=103, lastline=110]{PS2.R}
+		
+		
+			% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+			% Date and time: Sat, Feb 18, 2023 - 21:44:39
+			\begin{table}[!htbp] \centering 
+				\caption{Test: Interactive Model or not} 
+				\label{} 
+				\begin{tabular}{@{\extracolsep{5pt}}lccccc} 
+					\\[-1.8ex]\hline 
+					\hline \\[-1.8ex] 
+					Statistic & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Max} \\ 
+					\hline \\[-1.8ex] 
+					Resid. Df & 2 & 8,491.000 & 4.243 & 8,488 & 8,494 \\ 
+					Resid. Dev & 2 & 11,565.110 & 4.450 & 11,561.970 & 11,568.260 \\ 
+					Df & 1 & 6.000 &  & 6 & 6 \\ 
+					Deviance & 1 & 6.293 &  & 6.293 & 6.293 \\ 
+					Pr(\textgreater Chi) & 1 & 0.391 &  & 0.391 & 0.391 \\ 
+					\hline \\[-1.8ex] 
+				\end{tabular} 
+			\end{table}
+
+				 
+		Conclusion: The p-value is larger than 0.1. Therefore, there is no significant difference between the two models. We can conclude that it is not appropriate to include interaction in the model.
 		\end{itemize}
 	\end{enumerate}
 	\end{enumerate}
