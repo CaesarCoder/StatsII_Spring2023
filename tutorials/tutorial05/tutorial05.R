@@ -4,6 +4,13 @@
 # clear global .envir
 #####################
 
+install.packages("nnet")
+install.packages("MASS")
+library(nnet)
+library(MASS)
+library(ggplot2)
+
+
 # remove objects
 rm(list=ls())
 # detach all libraries
@@ -49,6 +56,60 @@ workingMoms <- read.table("http://statmath.wu.ac.at/courses/StatsWithR/WorkingMo
 
 # (a) Perform an ordered (proportional odds) logistic regression of attitude toward working mothers on the other variables.
 # What conclusions do you draw?
+workingMoms$gender <- as.factor(workingMoms$gender)
+workingMoms$attitude <- factor(workingMoms$attitude,
+                               levels = c("SD", "D", "A", "SA"),
+                               labels = c("Strongly Disagree", 
+                                          "Disagree",
+                                          "Agree",
+                                          "Strongly Agree"))
+workingMoms$gender <- as.factor(workingMoms$gender)
+workingMoms$race <- factor(workingMoms$race,
+                           levels = c(0, 1),
+                           labels = c("Non-white", "white"))
+workingMoms$year<- factor(workingMoms$year,
+                          levels = c("Year1977", "Year1989"),
+                          labels = c("1977","1989"))
+ordered_att <- polr(attitude ~ age + education + prestige + gender + race, data = workingMoms)
+summary(ordered_att)
+
+# being male, are being less likely to agree; the more prestiage, the more likeliy to agree 
+
+
+# calculate a p value
+ctable <- coef(summary(ordered_att))
+p <- pnorm(abs(ctable[, "t value"]), lower.tail = FALSE) * 2
+(ctable <- cbind(ctable, "p value" = p))
+
+# calculate confidence intervals
+(ci <- confint(ordered_att))
+
+# covert to odds ratio 
+exp(cbind(OR = coef(ordered_att), ci))
+
+
+
+# b) fit a multinomial logit model 
+workingMoms$attitude <- relevel(workingMoms$attitude, ref = "Strongly Disagree")
+
+
+mult.log <- multinom(attitude ~., data = workingMoms)
+exp(coef(mult.log))
+
+
+
+
+
+
+
+
+
+exp(cbind(OR = coef(ordered_att), confint(ordered_att)))
+
+(exp())
+
+    
+basepredict.polr(ordered_att, values = c (rep(0, 2), 1, rep(0, 7), 1))
 
 # (b) Assess whether the proportional-odds assumption appears to hold for this regression. 
 # Fit a multinomial logit model to the data, and compare and contrast the results with those from the proportional odds model.
