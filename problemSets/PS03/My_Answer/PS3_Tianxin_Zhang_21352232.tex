@@ -101,6 +101,8 @@
 \begin{enumerate}
 	\item Construct and interpret an unordered multinomial logit with \texttt{GDPWdiff} as the output and "no change" as the reference category, including the estimated cutoff points and coefficients.
 	
+	\lstinputlisting[language=R, firstline=9, lastline=27]{PS3.R}
+	
 	\begin{table}[!htbp] \centering 
 		\caption{mult.log Results} 
 		\label{} 
@@ -128,16 +130,23 @@
 			\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
 		\end{tabular} 
 	\end{table} 
-	Interpretation
+	Interpretation:\\
+	Negative vs. no change model:\\ 
+	Coefficient for REG: Holding other covariates constant, for every one unit change in regime type, from non-democracy to democracy, we expect to see an increase in the log-odds of GDP change negatively vs. no change in GDP by 1.379 on average. \\
+	
+	Coefficient for OIL: Holding other covariates constant, for every one unit change in oil exportation, from "the average ratio of fuel exports to total exports in 1984-86 did not exceeded 50\% " to "the average ratio of fuel exports to total exports in 1984-86 exceeded 50\%", we expect to see an increase in the log-odds of GDP change negatively vs. no change in GDP by 4.784 on average. \\
+	
+	Positive vs. no change model:\\ 
+	Coefficient for REG: Holding other covariates constant, for every one unit change in regime type, from non-democracy to democracy, we expect to see an increase in the log-odds of GDP change positively vs. no change in GDP by 1.769 on average. \\
+	
+	Coefficient for OIL: Holding other covariates constant, for every one unit change in oil exportation, from "the average ratio of fuel exports to total exports in 1984-86 did not exceeded 50\% " to "the average ratio of fuel exports to total exports in 1984-86 exceeded 50\%", we expect to see an increase in the log-odds of GDP change positively vs. no change in GDP by 4.576 on average. \\
+	
 	
 	\item Construct and interpret an ordered multinomial logit with \texttt{GDPWdiff} as the outcome variable, including the estimated cutoff points and coefficients.
-	% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
-	% Date and time: Wed, Mar 22, 2023 - 00:50:20
+	\lstinputlisting[language=R, firstline=29, lastline=33]{PS3.R}
 	
-	% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
-	% Date and time: Wed, Mar 22, 2023 - 01:01:08
 % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
-% Date and time: Wed, Mar 22, 2023 - 01:04:39
+% Date and time: Sat, Mar 25, 2023 - 13:15:53
 \begin{table}[!htbp] \centering 
 	\caption{ord.log Results} 
 	\label{} 
@@ -148,11 +157,11 @@
 		\cline{2-2} 
 		\\[-1.8ex] & GDPWdiff\_reo \\ 
 		\hline \\[-1.8ex] 
-		REG & 0.410$^{***}$ \\ 
+		REG & 0.398$^{***}$ \\ 
 		& (0.075) \\ 
 		& \\ 
-		OIL & $-$0.179 \\ 
-		& (0.115) \\ 
+		OIL & $-$0.199$^{*}$ \\ 
+		& (0.116) \\ 
 		& \\ 
 		\hline \\[-1.8ex] 
 		Observations & 3,721 \\ 
@@ -162,8 +171,10 @@
 	\end{tabular} 
 \end{table} 
 
-Interpretation 
-	
+Interpretation:\\
+Coefficient for Regime type: Holding other covariates constant, one unit change in the regime type, from the category of non-democracy to democracy, we expect to see an increase in the log odds of change in GDP in the positive direction by 0.398 on average.\\ 
+
+Coefficient for OIL: Holding other covariates constant, for every one unit change in oil exportation, from "the average ratio of fuel exports to total exports in 1984-86 did not exceeded 50\% " to "the average ratio of fuel exports to total exports in 1984-86 exceeded 50\%", we expect to see an decrease in the log-odds of GDP change in a positive direction by 0.199 on average. \\
 \end{enumerate}
 
 \section*{Question 2} 
@@ -208,13 +219,28 @@ Interpretation
 		\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
 	\end{tabular} 
 \end{table} 
+	
+	\lstinputlisting[language=R, firstline=40, lastline=67]{PS3.R}
+
+Therefore, there is no sufficient evidence that PAN presidential candidate will visit swing districts more.\\ 
 
 
 	\item [(b)]
 	Interpret the \texttt{marginality.06} and \texttt{PAN.governor.06} coefficients.
 	
+	1. Interpretation of the coefficient for marginality.06: 
+	Holding all other covariates constant, for a one unit change in marginality.06, from the category of not-marginal to the category of marginal, the logs of expected counts of visit is expected to decrease by 2.080. \\
+	
+	
+	
+	2. Interpretation of the coefficient for PAN.governor.06:  
+	Holding all other covariates constant,for a one unit change in PAN.governor.06, from the category of not PAN.governor to the category of PAN.governor, the logs of expected counts of visit is expected to decrease by 0.312.\\ 
+	
 	\item [(c)]
 	Provide the estimated mean number of visits from the winning PAN presidential candidate for a hypothetical district that was competitive (\texttt{competitive.district}=1), had an average poverty level (\texttt{marginality.06} = 0), and a PAN governor (\texttt{PAN.governor.06}=1).
+	
+	\lstinputlisting[language=R, firstline=94, lastline=110]{PS3.R}
+	
 	
 \end{enumerate}
 

@@ -19,12 +19,15 @@ data$GDPWdiff_reo <- as.factor(data$GDPWdiff_reo)
 data$GDPWdiff_reo <- relevel(data$GDPWdiff_reo, ref = "no change")
 
 
-# run multinomial regression 
+# run unordered multinomial regression 
 
 mult.log <- multinom(GDPWdiff_reo ~ REG + OIL, data = data)
 summary(mult.log)
 stargazer(mult.log, title="mult.log Results")
 
+
+# run ordered multinomial regression 
+data$GDPWdiff_reo <- factor(data$GDPWdiff_reo , levels = c("negative", "no change", "positive"))
 ord.log <- polr(GDPWdiff_reo ~ REG + OIL, data = data, Hess = TRUE)
 summary(ord.log)
 stargazer(ord.log, title="ord.log Results")
@@ -105,3 +108,4 @@ exp(cfs[1] + cfs[2] * 1 + cfs[3] * 0 + cfs[4] *1)
 ##  0.01494818 
 
 ## In conclusion, the estimated mean number of visit is 0. 
+
