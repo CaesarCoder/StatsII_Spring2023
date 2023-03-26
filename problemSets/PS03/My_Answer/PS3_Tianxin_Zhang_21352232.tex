@@ -136,10 +136,14 @@
 	
 	Coefficient for OIL: Holding other covariates constant, for every one unit change in oil exportation, from "the average ratio of fuel exports to total exports in 1984-86 did not exceeded 50\% " to "the average ratio of fuel exports to total exports in 1984-86 exceeded 50\%", we expect to see an increase in the log-odds of GDP change negatively vs. no change in GDP by 4.784 on average. \\
 	
+	Intercept: Holding all covariates constant as 0, the log odds of GDP change negatively vs. no change in GDP is 3.805 on average.\\
+	
 	Positive vs. no change model:\\ 
 	Coefficient for REG: Holding other covariates constant, for every one unit change in regime type, from non-democracy to democracy, we expect to see an increase in the log-odds of GDP change positively vs. no change in GDP by 1.769 on average. \\
 	
 	Coefficient for OIL: Holding other covariates constant, for every one unit change in oil exportation, from "the average ratio of fuel exports to total exports in 1984-86 did not exceeded 50\% " to "the average ratio of fuel exports to total exports in 1984-86 exceeded 50\%", we expect to see an increase in the log-odds of GDP change positively vs. no change in GDP by 4.576 on average. \\
+	
+	Intercept: Holding all covariates constant as 0, the log odds of GDP change positively vs. no change in GDP is 4.534 on average.\\
 	
 	
 	\item Construct and interpret an ordered multinomial logit with \texttt{GDPWdiff} as the outcome variable, including the estimated cutoff points and coefficients.
@@ -175,6 +179,11 @@ Interpretation:\\
 Coefficient for Regime type: Holding other covariates constant, one unit change in the regime type, from the category of non-democracy to democracy, we expect to see an increase in the log odds of change in GDP in the positive direction by 0.398 on average.\\ 
 
 Coefficient for OIL: Holding other covariates constant, for every one unit change in oil exportation, from "the average ratio of fuel exports to total exports in 1984-86 did not exceeded 50\% " to "the average ratio of fuel exports to total exports in 1984-86 exceeded 50\%", we expect to see an decrease in the log-odds of GDP change in a positive direction by 0.199 on average. \\
+
+Intercept (negative|no change  -0.7312): Holding all covariates constant as 0, the cutoff points of the log odds between negative change in GDP and no change in GDP in this model is -0.7312.\\ 
+
+Intercept (no change|positive  -0.7105): Holding all covariates constant as 0, the cutoff points of the log odds between no change in GDP and positive change in GDP in this model is -0.7105.\\ 
+
 \end{enumerate}
 
 \section*{Question 2} 
