@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.14)  26 MAR 2023 22:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.14)  26 MAR 2023 23:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1048,10 +1048,10 @@ ged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27119 strings out of 475389
- 482534 string characters out of 2776528
+ 27117 strings out of 475389
+ 482515 string characters out of 2776528
  1142910 words of memory out of 3000000
- 47912 multiletter control sequences out of 15000+600000
+ 47910 multiletter control sequences out of 15000+600000
  480352 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,10n,89p,3260b,2206s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1070,7 +1070,7 @@ b><C:/Users/Caesar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 msfonts/cm/cmsy8.pfb><C:/Users/Caesar/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmti12.pfb><C:/Users/Caesar/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on PS3_Tianxin_Zhang_21352232.pdf (7 pages, 165753 bytes).
+Output written on PS3_Tianxin_Zhang_21352232.pdf (7 pages, 165529 bytes).
 PDF statistics:
  203 PDF objects out of 1000 (max. 8388607)
  85 named destinations out of 1000 (max. 500000)
