@@ -61,9 +61,9 @@ z = (cfs[2]-0)/se_cd
 z # -0.4766106
 
 # two-tail, p-value
-p = 1-pnorm(abs(z))
+p = (1-pnorm(abs(z)))*2
 p
-# p value: 0.3168197, which is larger than 5%. Therefore, we cannot rejct the null hypothesis that
+# p value: 0.6336394, which is larger than 5%. Therefore, we cannot rejct the null hypothesis that
 # the coefficient for the competitive.district equals to 0.
 
 
