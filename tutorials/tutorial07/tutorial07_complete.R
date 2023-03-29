@@ -56,5 +56,7 @@ legend("bottomleft",
 # Adding an interaction
 cox.int <- coxph(child_surv ~ sex * socBranch, data = child)
 summary(cox.int)
-drop1(cox.int, test = "Chisq")
+drop1(cox.int, test = "Chisq")   # p larger than 0.05, so interaction modle is not better 
 stargazer(cox.int, type = "text")
+
+# The data are well addressed by additive model 

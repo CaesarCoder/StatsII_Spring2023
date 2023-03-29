@@ -32,6 +32,9 @@ lapply(c("survival", "eha", "tidyverse", "ggfortify", "stargazer"),  pkgTest)
 # The `child` dataset from the `eha` package is a dataset of 26,855 children born in 
 # Skellefte?, Sweden, 1850-1884. Children are followed for fifteen years or until death or 
 # outmigration.
+
+# The data on people who living the sample (died) 
+
 # The response variable is `exit`
 # Explanatory variables include:
 # - id: An identification number.
@@ -50,6 +53,36 @@ lapply(c("survival", "eha", "tidyverse", "ggfortify", "stargazer"),  pkgTest)
 ##    firstly for overall survival, and secondly comparing categories of socBranch. How do
 ##    you interpret the second plot?
 
+data(child)
+child_surv <- with(child, Surv(enter, exit, event))
+
+km <- survfit(child_surv ~ 1, data = child)   # just the average survivial across our data
+summary(km, times = seq(0, 15, 1))
+plot(km, main = "Kaplan-Meier Plot", xlab = "Years", ylim = c(0.7, 1))
+autoplot(km)
+
+km_socBrach <- survfit(child_surv ~ socBranch, data = child)
+autoplot(km_socBrach)
+
+
 ## b) Run a Cox Proportional Hazard regression on the data, using an additive model with 
 ##    `socBranch` and `sex` as explanatory variables. Run a test to assess the quality of the
 ##    model. How can we interpret the coefficients? Plot the model.
+  
+cox <- coxph(child_surv ~ sex + socBranch, data = child)
+summary(cox)
+drop1(cox, test = "Chisq")
+stargazer(cox, type = "text")
+
+# coefficient, female -0.0835
+# being female, decrease the log hazard of death. 
+# (if that's hazard, below 1, decrease hazard, larger than 1, increase hazard) 
+
+# exp(coef)  proportional hazard to die, larger than 1, more likely to die
+# exp(-coef) proportional hazard to survive, larger than 1, more likely to survie
+
+
+# hazard ratio
+exp(-0.083546)
+# The hazard raito of female babies is 0.92 that of male babies,
+# i.e. female babies are less likely to die (92 female babies die for every 100 male babies)
