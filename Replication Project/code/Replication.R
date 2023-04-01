@@ -1839,3 +1839,14 @@ stargazer(lm6_int, "text")
 
 
 summary(lm6)
+
+
+glm_cmc <- glm(cmc~cmc_chair_connection_current+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio, family=binomial(link="logit"))
+summary(glm)
+stargazer(glm, title = "logit model, additive: cmc")
+
+
+glm_int_cmc <- glm(cmc~cmc_chair_connection_current+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade + minority : rural, data=bio, family=binomial(link="logit"))
+summary(glm_int)
+stargazer(glm_int, title = "logit model, interaction: cmc")
+
