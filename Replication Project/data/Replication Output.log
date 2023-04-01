@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.14)  1 APR 2023 17:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.14)  1 APR 2023 21:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -909,6 +909,21 @@ LaTeX Warning: Label `' multiply defined.
 
 LaTeX Warning: Label `' multiply defined.
 
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `table_a11' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
 )
 \openout1 = `"Replication Output.aux"'.
 
@@ -1059,10 +1074,94 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.928 ...$<$0.1; $^{*}$p$<$0.05; $^{**}$p$<$0.01}}
+                                                   \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+\reserved@c ->\ifnum 0=`{}\fi \cr 
+                                  
+l.929 \end
+          {tabular}
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \crcr.
+\endarray ->\crcr 
+                  \egroup \egroup \@arrayright \gdef \@preamble {}
+l.929 \end{tabular}
+                   
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Extra }, or forgotten $.
+\endarray ->\crcr \egroup \egroup 
+                                  \@arrayright \gdef \@preamble {}
+l.929 \end{tabular}
+                   
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.981 ...$<$0.1; $^{*}$p$<$0.05; $^{**}$p$<$0.01}}
+                                                   \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+\reserved@c ->\ifnum 0=`{}\fi \cr 
+                                  
+l.982 \end
+          {tabular}
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \crcr.
+\endarray ->\crcr 
+                  \egroup \egroup \@arrayright \gdef \@preamble {}
+l.982 \end{tabular}
+                   
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Extra }, or forgotten $.
+\endarray ->\crcr \egroup \egroup 
+                                  \@arrayright \gdef \@preamble {}
+l.982 \end{tabular}
+                   
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+LaTeX Warning: Float too large for page by 795.43431pt on input line 1150.
+
 [1
 
 {C:/Users/Caesar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
-[3] [4] [5] [6] [7] [8] [9] [10] [11] (Replication Output.aux)
+[3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16]
+(Replication Output.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1070,10 +1169,10 @@ Package rerunfilecheck Info: File `"Replication Output".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26001 strings out of 475389
- 470152 string characters out of 2776528
- 878017 words of memory out of 3000000
- 46877 multiletter control sequences out of 15000+600000
+ 26012 strings out of 475389
+ 470238 string characters out of 2776528
+ 923102 words of memory out of 3000000
+ 46878 multiletter control sequences out of 15000+600000
  476697 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,10n,89p,3254b,442s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1081,16 +1180,17 @@ Here is how much of TeX's memory you used:
 /cmmi12.pfb><C:/Users/Caesar/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
 msfonts/cm/cmmi8.pfb><C:/Users/Caesar/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmr12.pfb><C:/Users/Caesar/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Caesar/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Caesar/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Caesar/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Cae
-sar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:
-/Users/Caesar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti
-8.pfb>
-Output written on "Replication Output.pdf" (11 pages, 121199 bytes).
+nts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Caesar/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Caesar/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Caesar/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Caes
+ar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/U
+sers/Caesar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12
+.pfb><C:/Users/Caesar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmti8.pfb>
+Output written on "Replication Output.pdf" (16 pages, 141552 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
+ 156 PDF objects out of 1000 (max. 8388607)
+ 37 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
