@@ -1841,12 +1841,93 @@ stargazer(lm6_int, "text")
 summary(lm6)
 
 
-glm_cmc <- glm(cmc~cmc_chair_connection_current+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio, family=binomial(link="logit"))
+## additive model: general promotion 
+glm_general <- glm(general~cmc_chair_connection_current+combat_post_1949
+                   +college+participated_long_march+commissar+minority+
+                     parent_CCP_leader+rural+cohort_decade, data=bio, family=binomial(link="logit"))
+summary(glm_general)
+stargazer(glm_general, titile = "logit model, additive: general")
+
+
+
+## interaction model (minority : rural): general promotion 
+glm_int_general <- glm(general~cmc_chair_connection_current+combat_post_1949
+                       +college+participated_long_march+commissar+minority+
+                         parent_CCP_leader+rural+cohort_decade + 
+                         minority : rural, data=bio, family=binomial(link="logit"))
+summary(glm_int_general)
+stargazer(glm_int_general, titile = "logit model, additive: general")
+
+
+
+
+
+## additive model: cmc promotion
+glm_cmc <- glm(cmc~cmc_chair_connection_current+combat_post_1949
+               +college+participated_long_march+commissar+minority+
+                 parent_CCP_leader+rural+cohort_decade, data=bio, family=binomial(link="logit"))
 summary(glm)
 stargazer(glm, title = "logit model, additive: cmc")
 
 
-glm_int_cmc <- glm(cmc~cmc_chair_connection_current+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade + minority : rural, data=bio, family=binomial(link="logit"))
-summary(glm_int)
-stargazer(glm_int, title = "logit model, interaction: cmc")
+
+## interaction model (minority : rural): cmc promotion
+glm_int_cmc_mr <- glm(cmc~cmc_chair_connection_current+combat_post_1949
+                   +college+participated_long_march+commissar+minority+
+                     parent_CCP_leader+rural+cohort_decade + minority : rural, data=bio, family=binomial(link="logit"))
+summary(glm_int_cmc_mr)
+stargazer(glm_int_cmc_mr, title = "logit model, interaction: cmc")
+
+
+
+
+
+
+
+
+## additive model: general promotion 
+glm_general <- glm(general~cmc_chair_connection_current+combat_post_1949
+                   +college+participated_long_march+commissar+minority+
+                     parent_CCP_leader+rural+cohort_decade, data=bio, family=binomial(link="logit"))
+summary(glm_general)
+stargazer(glm_general, titile = "logit model, additive: general")
+
+
+
+## interaction model (minority : rural): general promotion 
+glm_int_general <- glm(general~cmc_chair_connection_current+combat_post_1949
+                       +college+participated_long_march+commissar+minority+
+                         parent_CCP_leader+rural+cohort_decade + 
+                         minority : rural, data=bio, family=binomial(link="logit"))
+summary(glm_int_general)
+stargazer(glm_int_general, titile = "logit model (minority : rural), additive: general")
+
+
+## interaction model (combat_post_1949 : commissar): general promotion
+glm_int_cmc_cc <- glm(general~cmc_chair_connection_current+combat_post_1949
+                      +college+participated_long_march+commissar+minority+
+                        parent_CCP_leader+rural+cohort_decade + 
+                        combat_post_1949 : commissar, data=bio, family=binomial(link="logit"))
+summary(glm_int_cmc_cc)
+stargazer(glm_int_cmc_cc, title = "logit model, interaction (combat_post_1949 : commissar): general")
+
+
+## interaction model (combat_post_1949 : commissar): cmc promotion
+glm_int_cmc_cc <- glm(cmc~cmc_chair_connection_current+combat_post_1949
+                   +college+participated_long_march+commissar+minority+
+                     parent_CCP_leader+rural+cohort_decade + 
+                     combat_post_1949 : commissar, data=bio, family=binomial(link="logit"))
+summary(glm_int_cmc_cc)
+stargazer(glm_int_cmc_cc, title = "logit model, interaction (combat_post_1949 : commissar): cmc")
+
+
+
+## interaction model (minority: commissar): cmc promotion
+glm_int_cmc_mc <- glm(cmc~cmc_chair_connection_current+combat_post_1949
+                      +college+participated_long_march+commissar+minority+
+                        parent_CCP_leader+rural+cohort_decade + 
+                        minority : commissar, data=bio, family=binomial(link="logit"))
+summary(glm_int_cmc_mc)
+stargazer(glm_int_cmc_mc, title = "logit model, interaction (minority : commissar): cmc")
+
 
