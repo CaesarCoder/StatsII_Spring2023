@@ -1687,21 +1687,29 @@ stargazer(lm1, lm2, lm3, lm4,type = "latex",
 
 
 lm1 <- lm(general_deng~deng.network, data=bio)
-lm2 <- lm(general_deng~deng.network+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
+lm2 <- lm(general_deng~deng.network+combat_post_1949+college+participated_long_march+
+            commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
 lm3 <- lm(general_jiang~jiang.network, data=bio)
-lm4 <- lm(general_jiang~jiang.network+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
+lm4 <- lm(general_jiang~jiang.network+combat_post_1949+college+participated_long_march+
+            commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
 lm5 <- lm(general_hu~hu.network, data=bio)
-lm6 <- lm(general_hu~hu.network+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
+lm6 <- lm(general_hu~hu.network+combat_post_1949+college+participated_long_march+
+            commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
 lm7 <- lm(general_xi~xi.network, data=bio)
-lm8 <- lm(general_xi~xi.network+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
+lm8 <- lm(general_xi~xi.network+combat_post_1949+college+participated_long_march+
+            commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
 
 stargazer(lm1, lm2, lm3, lm4, lm5, lm6, lm7, lm8, type = "latex", 
-          omit=c("combat_post_1949", "college", "participated_long_march", "commissar", "minority", "parent_CCP_leader", "rural", "cohort_decade"),
+          omit=c("combat_post_1949", "college", "participated_long_march", "commissar", 
+                 "minority", "parent_CCP_leader", "rural", "cohort_decade"),
           label = "table_a18", 
           omit.stat=c("f", "ser"),
-          dep.var.labels = c("Promoted to General (Deng)", "Promoted to General (Jiang)", "Promoted to General (Hu)", "Promoted to General (Xi)"),
-          title = "Cross-Sectional Measure of Promotion to General by CMC Chairman, Restricted to Generals Eligible For Promotion During Each Chairmans' Term.",
-          covariate.labels = c("Career Tie to Deng Xiaoping", "Career Tie to Jiang Zemin", "Career Tie to Hu Jintao", "Career Tie to Xi Jinping"),
+          dep.var.labels = c("Promoted to General (Deng)", "Promoted to General (Jiang)", 
+                             "Promoted to General (Hu)", "Promoted to General (Xi)"),
+          title = "Cross-Sectional Measure of Promotion to General by CMC Chairman, 
+          Restricted to Generals Eligible For Promotion During Each Chairmans' Term.",
+          covariate.labels = c("Career Tie to Deng Xiaoping", "Career Tie to Jiang Zemin", 
+                               "Career Tie to Hu Jintao", "Career Tie to Xi Jinping"),
           star.char = c("+", "*", "**"),
           notes.append=FALSE,
           notes = c("$^{+}$p$<$0.1; $^{*}$p$<$0.05; $^{**}$p$<$0.01}"),
@@ -1709,22 +1717,31 @@ stargazer(lm1, lm2, lm3, lm4, lm5, lm6, lm7, lm8, type = "latex",
 
 
 lm1 <- lm(cmc_deng~deng.network, data=bio)
-lm2 <- lm(cmc_deng~deng.network+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
+lm2 <- lm(cmc_deng~deng.network+combat_post_1949+college+participated_long_march+
+            commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
 lm3 <- lm(cmc_jiang~jiang.network, data=bio)
-lm4 <- lm(cmc_jiang~jiang.network+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
+lm4 <- lm(cmc_jiang~jiang.network+combat_post_1949+college+participated_long_march+
+            commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
 lm5 <- lm(cmc_hu~hu.network, data=bio)
-lm6 <- lm(cmc_hu~hu.network+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
+lm6 <- lm(cmc_hu~hu.network+combat_post_1949+college+participated_long_march+commissar+
+            minority+parent_CCP_leader+rural+cohort_decade, data=bio)
 lm7 <- lm(cmc_xi~xi.network, data=bio)
-lm8 <- lm(cmc_xi~xi.network+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
+lm8 <- lm(cmc_xi~xi.network+combat_post_1949+college+participated_long_march+commissar+
+            minority+parent_CCP_leader+rural+cohort_decade, data=bio)
 
 stargazer(lm1, lm2, lm3, lm4, lm5, lm6, lm7, lm8, type = "latex", 
-          omit=c("combat_post_1949", "college", "participated_long_march", "commissar", "minority", "parent_CCP_leader", "rural", "cohort_decade"),
+          omit=c("combat_post_1949", "college", "participated_long_march", "commissar", 
+                 "minority", "parent_CCP_leader", "rural", "cohort_decade"),
           label = "table_a19", 
           omit.stat=c("f", "ser"),
-          dep.var.labels = c("Promoted to CMC (Deng)", "Promoted to CMC (Jiang)", "Promoted to CMC (Hu)", "Promoted to CMC (Xi)"),
-          title = "Cross-Sectional Measure of Promotion to CMC by CMC Chairman, Restricted to Generals Eligible For Promotion During Each Chairmans' Term.",
-          covariate.labels = c("Career Tie to Deng Xiaoping", "Career Tie to Jiang Zemin", "Career Tie to Hu Jintao", "Career Tie to Xi Jinping"),
-          add.lines=list(c("Control variables", "", "$\\checkmark$","", "$\\checkmark$","", "$\\checkmark$", "", "$\\checkmark$")),
+          dep.var.labels = c("Promoted to CMC (Deng)", "Promoted to CMC (Jiang)", 
+                             "Promoted to CMC (Hu)", "Promoted to CMC (Xi)"),
+          title = "Cross-Sectional Measure of Promotion to CMC by CMC Chairman, 
+          Restricted to Generals Eligible For Promotion During Each Chairmans' Term.",
+          covariate.labels = c("Career Tie to Deng Xiaoping", "Career Tie to Jiang Zemin", 
+                               "Career Tie to Hu Jintao", "Career Tie to Xi Jinping"),
+          add.lines=list(c("Control variables", "", "$\\checkmark$","", "$\\checkmark$","", 
+                           "$\\checkmark$", "", "$\\checkmark$")),
           star.char = c("+", "*", "**"),
           notes.append=FALSE,
           notes = c("$^{+}$p$<$0.1; $^{*}$p$<$0.05; $^{**}$p$<$0.01}"),
@@ -2003,9 +2020,8 @@ panel_year$general_varying
 
 
 
-#####################################################
-##Panel Analysis: Foreign threats alternate measure##
-#####################################################
+##Panel Analysis: Foreign threats alternate measure, run logit regression by Caesar
+
 
 
 glm1 <- glm(general_varying~combat_post_1949*foreign2+as.factor(year),  data=panel_year, family=binomial(link="logit"))
@@ -2098,69 +2114,56 @@ stargazer(lm1, lm2, lm3, lm4, type = "latex",
 
 
 
-################################################################
-##Appendix: Domestic Threat Measure, Excluding Different Years##
+
+##Appendix: Domestic Threat Measure, Excluding Different Years, logit regression by Caesar
 ################################################################
 
 
 
 glm1 <- glm(general_varying~cmc_connection_varying*domestic1990+as.factor(year),  data=panel_year, family=binomial(link="logit"))
 stargazer(glm1, "Domestic threat, general promotion")
+s1 <- summary(glm1)
 
 
 
-lm2 <- plm(general_varying~cmc_connection_varying*domestic1991+as.factor(year),  data=panel_year, model="within")
-
-cluster.fit2 <- coeftest(lm2, vcov = function(x) 
-  plm::vcovHC(x, method = 'white1', cluster = 'group', type = 'HC3'))
+glm2 <- glm(general_varying~cmc_connection_varying*domestic1991+as.factor(year),  data=panel_year, family=binomial(link="logit"))
+s2 <- summary(glm2)
 
 
-lm3 <- plm(general_varying~cmc_connection_varying*domestic1992+as.factor(year),  data=panel_year, model="within")
-
-cluster.fit3 <- coeftest(lm3, vcov = function(x) 
-  plm::vcovHC(x, method = 'white1', cluster = 'group', type = 'HC3'))
+glm3 <- glm(general_varying~cmc_connection_varying*domestic1992+as.factor(year),  data=panel_year, family=binomial(link="logit"))
+s3 <- summary(glm3)
 
 
-lm4 <- plm(general_varying~cmc_connection_varying*domestic1993+as.factor(year),  data=panel_year, model="within")
-
-cluster.fit4 <- coeftest(lm4, vcov = function(x) 
-  plm::vcovHC(x, method = 'white1', cluster = 'group', type = 'HC3'))
 
 
-lm5 <- plm(general_varying~cmc_connection_varying*domestic2012+as.factor(year),  data=panel_year, model="within")
-
-cluster.fit5 <- coeftest(lm5, vcov = function(x) 
-  plm::vcovHC(x, method = 'white1', cluster = 'group', type = 'HC3'))
+glm4 <- glm(general_varying~cmc_connection_varying*domestic1993+as.factor(year),  data=panel_year, family=binomial(link="logit"))
+s4 <- summary(glm4)
 
 
-lm6 <- plm(general_varying~cmc_connection_varying*domestic2013+as.factor(year),  data=panel_year, model="within")
 
-cluster.fit6 <- coeftest(lm6, vcov = function(x) 
-  plm::vcovHC(x, method = 'white1', cluster = 'group', type = 'HC3'))
-
-
-lm7 <- plm(general_varying~cmc_connection_varying*domestic2014+as.factor(year),  data=panel_year, model="within")
-
-cluster.fit7 <- coeftest(lm7, vcov = function(x) 
-  plm::vcovHC(x, method = 'white1', cluster = 'group', type = 'HC3'))
+glm5 <- glm(general_varying~cmc_connection_varying*domestic2012+as.factor(year),  data=panel_year, family=binomial(link="logit"))
+s5 <- summary(glm5)
 
 
-lm8 <- plm(general_varying~cmc_connection_varying*domestic2015+as.factor(year),  data=panel_year, model="within")
 
-cluster.fit8 <- coeftest(lm8, vcov = function(x) 
-  plm::vcovHC(x, method = 'white1', cluster = 'group', type = 'HC3'))
+glm6 <- glm(general_varying~cmc_connection_varying*domestic2013+as.factor(year),  data=panel_year, family=binomial(link="logit"))
+s6 <- summary(glm6)
 
 
-stargazer(lm1, lm2, lm3, lm4, lm5, lm6, lm7, lm8, type = "latex", 
+glm7 <- glm(general_varying~cmc_connection_varying*domestic2014+as.factor(year),  data=panel_year, family=binomial(link="logit"))
+s7 <- summary(glm7)
+
+
+glm8 <- glm(general_varying~cmc_connection_varying*domestic2015+as.factor(year),  data=panel_year, family=binomial(link="logit"))
+s8 <-summary(glm8)
+s8
+
+stargazer(glm1, glm2, glm3, glm4, glm5, glm6, glm7, glm8, type = "latex", 
           omit=c("year"),
-          se = list(cluster.fit1[,"Std. Error"], cluster.fit2[,"Std. Error"],
-                    cluster.fit3[,"Std. Error"], cluster.fit4[,"Std. Error"],
-                    cluster.fit5[,"Std. Error"], cluster.fit6[,"Std. Error"],
-                    cluster.fit7[,"Std. Error"], cluster.fit8[,"Std. Error"]), 
           label = "table_a16", 
           omit.stat=c("f", "ser"),
           dep.var.labels = c("Promoted to Central military Commission"),
-          title = "Alternative Explanatory Variable: Exclusion of individual years counted as a year of domestic threat. For legibility, domestic threat coefficients are not shown.",
+          title = "glm, Alternative Explanatory Variable: Exclusion of individual years counted as a year of domestic threat. For legibility, domestic threat coefficients are not shown.",
           covariate.labels = c("Career Tie to Current CMC Chair", "Domestic Threat (Excluding 1990)", "Domestic Threat (Excluding 1991)", "Domestic Threat (Excluding 1992)", "Domestic Threat (Excluding 1993)", "Domestic Threat (Excluding 2012)", "Domestic Threat (Excluding 2013)", "Domestic Threat (Excluding 2014)", "Domestic Threat (Excluding 2015)",
                                "Domestic Threat (Excluding 1990) X Career Tie", "Domestic Threat (Excluding 1991) X Career Tie", "Domestic Threat (Excluding 1992) X Career Tie", "Domestic Threat (Excluding 1993) X Career Tie", "Domestic Threat (Excluding 2012) X Career Tie", "Domestic Threat (Excluding 2013) X Career Tie", "Domestic Threat (Excluding 2014) X Career Tie", "Domestic Threat (Excluding 2015) X Career Tie"),
           add.lines=list(c("Individual fixed effects", "$\\checkmark$", "$\\checkmark$", "$\\checkmark$", "$\\checkmark$", "$\\checkmark$", "$\\checkmark$", "$\\checkmark$", "$\\checkmark$"),
@@ -2219,106 +2222,72 @@ stargazer(lm1, lm2, lm3, lm4,type = "latex",
           notes = c("Standard errors clustered by individual. $^{+}$p$<$0.1; $^{*}$p$<$0.05; $^{**}$p$<$0.01}"),
           out = "Table_A17.tex")
 
+
+
+
+##Appendix: Cross-sectional career tie analysis by leader#, replicated with glm by Caesar 
 ###########################################################
-##Appendix: Cross-sectional career tie analysis by leader##
-###########################################################
 
 
-lm1 <- lm(general_deng~deng.network, data=bio)
-lm2 <- lm(general_deng~deng.network+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
-lm3 <- lm(general_jiang~jiang.network, data=bio)
-lm4 <- lm(general_jiang~jiang.network+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
-lm5 <- lm(general_hu~hu.network, data=bio)
-lm6 <- lm(general_hu~hu.network+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
-lm7 <- lm(general_xi~xi.network, data=bio)
-lm8 <- lm(general_xi~xi.network+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
+glm1 <- glm(general_deng~deng.network, data=bio, family=binomial(link="logit"))
+glm2 <- glm(general_deng~deng.network+combat_post_1949+college+participated_long_march+
+              commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio, family=binomial(link="logit"))
+glm3 <- glm(general_jiang~jiang.network, data=bio, family=binomial(link="logit"))
+glm4 <- glm(general_jiang~jiang.network+combat_post_1949+college+participated_long_march+
+              commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio, family=binomial(link="logit"))
+glm5 <- glm(general_hu~hu.network, data=bio, family=binomial(link="logit"))
+glm6 <- glm(general_hu~hu.network+combat_post_1949+college+participated_long_march+
+              commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio, family=binomial(link="logit"))
+glm7 <- glm(general_xi~xi.network, data=bio, family=binomial(link="logit"))
+glm8 <- glm(general_xi~xi.network+combat_post_1949+college+participated_long_march+c
+            ommissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio, family=binomial(link="logit"))
 
-stargazer(lm1, lm2, lm3, lm4, lm5, lm6, lm7, lm8, type = "latex", 
-          omit=c("combat_post_1949", "college", "participated_long_march", "commissar", "minority", "parent_CCP_leader", "rural", "cohort_decade"),
+stargazer(glm1, glm2, glm3, glm4, glm5, glm6, glm7, glm8, type = "latex", 
+          omit=c("combat_post_1949", "college", "participated_long_march", 
+                 "commissar", "minority", "parent_CCP_leader", "rural", "cohort_decade"),
           label = "table_a18", 
           omit.stat=c("f", "ser"),
-          dep.var.labels = c("Promoted to General (Deng)", "Promoted to General (Jiang)", "Promoted to General (Hu)", "Promoted to General (Xi)"),
-          title = "Cross-Sectional Measure of Promotion to General by CMC Chairman, Restricted to Generals Eligible For Promotion During Each Chairmans' Term.",
-          covariate.labels = c("Career Tie to Deng Xiaoping", "Career Tie to Jiang Zemin", "Career Tie to Hu Jintao", "Career Tie to Xi Jinping"),
+          dep.var.labels = c("Promoted to General (Deng)", "Promoted to General (Jiang)", 
+                             "Promoted to General (Hu)", "Promoted to General (Xi)"),
+          title = "Logit Regression, Cross-Sectional Measure of Promotion to General by CMC Chairman, 
+          Restricted to Generals Eligible For Promotion During Each Chairmans' Term.",
+          covariate.labels = c("Career Tie to Deng Xiaoping", "Career Tie to Jiang Zemin", 
+                               "Career Tie to Hu Jintao", "Career Tie to Xi Jinping"),
           star.char = c("+", "*", "**"),
           notes.append=FALSE,
           notes = c("$^{+}$p$<$0.1; $^{*}$p$<$0.05; $^{**}$p$<$0.01}"),
           out = "Table_A18.tex")
 
 
-lm1 <- lm(cmc_deng~deng.network, data=bio)
-lm2 <- lm(cmc_deng~deng.network+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
-lm3 <- lm(cmc_jiang~jiang.network, data=bio)
-lm4 <- lm(cmc_jiang~jiang.network+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
-lm5 <- lm(cmc_hu~hu.network, data=bio)
-lm6 <- lm(cmc_hu~hu.network+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
-lm7 <- lm(cmc_xi~xi.network, data=bio)
-lm8 <- lm(cmc_xi~xi.network+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio)
+glm1 <- glm(cmc_deng~deng.network, data=bio, family=binomial(link="logit"))
+glm2 <- glm(cmc_deng~deng.network+combat_post_1949+college+participated_long_march+
+              commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio, family=binomial(link="logit"))
+glm3 <- glm(cmc_jiang~jiang.network, data=bio, family=binomial(link="logit"))
+glm4 <- glm(cmc_jiang~jiang.network+combat_post_1949+college+participated_long_march+
+              commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio, family=binomial(link="logit"))
+glm5 <- glm(cmc_hu~hu.network, data=bio, family=binomial(link="logit"))
+glm6 <- glm(cmc_hu~hu.network+combat_post_1949+college+participated_long_march+
+              commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio, family=binomial(link="logit"))
+glm7 <- glm(cmc_xi~xi.network, data=bio, family=binomial(link="logit"))
+glm8 <- glm(cmc_xi~xi.network+combat_post_1949+college+participated_long_march+
+              commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio, family=binomial(link="logit"))
 
-stargazer(lm1, lm2, lm3, lm4, lm5, lm6, lm7, lm8, type = "latex", 
-          omit=c("combat_post_1949", "college", "participated_long_march", "commissar", "minority", "parent_CCP_leader", "rural", "cohort_decade"),
+stargazer(glm1, glm2, glm3, glm4, glm5, glm6, glm7, glm8, type = "latex", 
+          omit=c("combat_post_1949", "college", "participated_long_march", "commissar", "minority", 
+                 "parent_CCP_leader", "rural", "cohort_decade"),
           label = "table_a19", 
           omit.stat=c("f", "ser"),
-          dep.var.labels = c("Promoted to CMC (Deng)", "Promoted to CMC (Jiang)", "Promoted to CMC (Hu)", "Promoted to CMC (Xi)"),
-          title = "Cross-Sectional Measure of Promotion to CMC by CMC Chairman, Restricted to Generals Eligible For Promotion During Each Chairmans' Term.",
-          covariate.labels = c("Career Tie to Deng Xiaoping", "Career Tie to Jiang Zemin", "Career Tie to Hu Jintao", "Career Tie to Xi Jinping"),
-          add.lines=list(c("Control variables", "", "$\\checkmark$","", "$\\checkmark$","", "$\\checkmark$", "", "$\\checkmark$")),
+          dep.var.labels = c("Promoted to CMC (Deng)", "Promoted to CMC (Jiang)", "Promoted to CMC (Hu)", 
+                             "Promoted to CMC (Xi)"),
+          title = "logit regression Cross-Sectional Measure of Promotion to CMC by CMC Chairman, 
+          Restricted to Generals Eligible For Promotion During Each Chairmans' Term.",
+          covariate.labels = c("Career Tie to Deng Xiaoping", "Career Tie to Jiang Zemin", 
+                               "Career Tie to Hu Jintao", "Career Tie to Xi Jinping"),
+          add.lines=list(c("Control variables", "", "$\\checkmark$","", "$\\checkmark$","", 
+                           "$\\checkmark$", "", "$\\checkmark$")),
           star.char = c("+", "*", "**"),
           notes.append=FALSE,
           notes = c("$^{+}$p$<$0.1; $^{*}$p$<$0.05; $^{**}$p$<$0.01}"),
           out = "Table_A19.tex")
-
-
-######################################
-##Appendix: Panel Analysis by Leader##
-######################################
-
-
-lm1 <- plm(general_varying~deng.varying+jiang.varying+hu.varying+xi.varying+as.factor(year),  data=panel_year, model="within")
-
-cluster.fit1 <- coeftest(lm1, vcov = function(x) 
-  plm::vcovHC(x, method = 'white1', cluster = 'group', type = 'HC3'))
-
-lm2 <- plm(general_varying~deng.varying+jiang.varying+hu.varying+xi.varying+age+as.factor(year),  data=panel_year, model="within")
-
-cluster.fit2 <- coeftest(lm2, vcov = function(x) 
-  plm::vcovHC(x, method = 'white1', cluster = 'group', type = 'HC3'))
-
-lm3 <- plm(general_varying~deng.varying+jiang.varying+hu.varying+xi.varying+age+as.factor(year)*cohort_decade,  data=panel_year, model="within")
-
-cluster.fit3 <- coeftest(lm3, vcov = function(x) 
-  plm::vcovHC(x, method = 'white1', cluster = 'group', type = 'HC3'))
-
-lm4 <- plm(general_varying~deng.varying+jiang.varying+hu.varying+xi.varying+age+as.factor(year)*as.factor(birth_year),  data=panel_year, model="within")
-
-cluster.fit4 <- coeftest(lm4, vcov = function(x) 
-  plm::vcovHC(x, method = 'white1', cluster = 'group', type = 'HC3'))
-
-stargazer(lm1, lm2, lm3, lm4, type = "latex", 
-          se = list(cluster.fit1[,"Std. Error"], cluster.fit2[,"Std. Error"],
-                    cluster.fit3[,"Std. Error"], cluster.fit4[,"Std. Error"]), 
-          omit=c("cohort_decade", "year", "Constant","age" , "college", "participated_long_march", "commissar", "combat_post_1949", "minority", "participated_long_march", "rural", "parent_CCP_leader"),
-          omit.stat=c("f", "ser"),
-          label=c("table_a20"),
-          dep.var.labels = c("Promoted to General (Mean: 0.295)"),
-          add.lines=list(c("Individual fixed effects", "$\\checkmark$", "$\\checkmark$", "$\\checkmark$", "$\\checkmark$"),
-                         c("Year fixed effects", "$\\checkmark$", "$\\checkmark$", "$\\checkmark$", "$\\checkmark$"),
-                         c("Domestic Threat X Controls", "", "$\\checkmark$", "$\\checkmark$", "$\\checkmark$"),
-                         c("Year FE X Birth decade FE", "", "", "$\\checkmark$", ""),
-                         c("Year FE X Birth year FE", "", "", "", "$\\checkmark$"),
-                         c("Clusters", rep(length(unique(panel_year$unique_id)), 4))),
-          covariate.labels = c("Career Tie to Deng Xiaoping", "Career Tie to Jiang Zemin", "Career Tie to Hu Jintao", "Career Tie to Xi Jinping"),
-          title = "Promotion to general, time-varying measure of career tie to CMC Chairman.",
-          star.char = c("+", "*", "**"),
-          notes.append=FALSE,
-          notes = c("Standard errors clustered by individual. $^{+}$p$<$0.1; $^{*}$p$<$0.05; $^{**}$p$<$0.01}"),
-          out = "Table_A20.tex")
-
-
-
-
-
-
-
 
 

@@ -31,9 +31,25 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 
 
+```
+
+
+
+
+```{r, results = 'asis'}
+
+glm1 <- glm(general_varying~cmc_connection_varying*domestic1990+as.factor(year),  data=panel_year, family=binomial(link="logit"))
+stargazer(glm1, "Domestic threat, general promotion", type = "latex")
+```
+
+
+
+
+
+
+
+
 
 ```{r}
-## additive model: general promotion 
-glm_general <- glm(general~cmc_chair_connection_current+combat_post_1949+college+participated_long_march+commissar+minority+parent_CCP_leader+rural+cohort_decade, data=bio, family=binomial(link="logit"))
-stargazer(glm_general, titile = "logit model, additive: general")
+
 ```

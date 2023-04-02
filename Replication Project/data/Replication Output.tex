@@ -32,6 +32,7 @@
 \usepackage{url}
 \usepackage{listings}
 \usepackage{color}
+\usepackage[A1paper, landscape, margin=0in]{geometry}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -591,6 +592,7 @@
 % Date and time: Sat, Apr 01, 2023 - 17:17:55
 \begin{table}[!htbp] \centering 
 	\caption{logit model, interaction (combat$_$post$_$1949 : commissar): general} 
+	\resizebox{\columnwidth}{!}{
 	\label{} 
 	\rmfamily
 	\scriptsize
@@ -656,7 +658,7 @@
 		\hline 
 		\hline \\[-1.8ex] 
 		\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
-	\end{tabular} 
+	\end{tabular} }
 \end{table} 
 
 
@@ -991,7 +993,10 @@
 % Date and time: Sat, Apr 01, 2023 - 21:04:30
 \begin{table}[!htbp] \centering 
 	\caption{Domestic threat, general promotion} 
-	\label{} 
+	\resizebox{0.2\textwidth}{!}
+	{ 
+	\label{}
+	\setlength{\tabcolsep}{0pt}
 	\rmfamily
 	\scriptsize 
 	\begin{tabular}{@{\extracolsep{5pt}}lc} 
@@ -1147,19 +1152,518 @@
 		\hline \\[-1.8ex] 
 		\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
 	\end{tabular} 
+}
+\end{table} 
+
+
+
+
+
+
+
+
+
+
+
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Sun, Apr 02, 2023 - 12:59:17
+\begin{table}[!htbp] \centering 
+	\caption{glm, Alternative Explanatory Variable: Exclusion of individual years counted as a year of domestic threat. For legibility, domestic threat coefficients are not shown.} 
+	\label{} 
+	\rmfamily
+	\scriptsize 
+	\begin{tabular}{@{\extracolsep{5pt}}lcccccccc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{8}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-9} 
+		\\[-1.8ex] & \multicolumn{8}{c}{Promoted to Central military Commission} \\ 
+		\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8)\\ 
+		\hline \\[-1.8ex] 
+		Career Tie to Current CMC Chair & 1.189$^{**}$ & 1.182$^{**}$ & 1.176$^{**}$ & 1.187$^{**}$ & 1.176$^{**}$ & 1.181$^{**}$ & 1.198$^{**}$ & 1.228$^{**}$ \\ 
+		& (0.120) & (0.120) & (0.120) & (0.120) & (0.118) & (0.119) & (0.119) & (0.120) \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1990) & $-$0.055 &  &  &  &  &  &  &  \\ 
+		& (0.513) &  &  &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1991) &  & $-$0.059 &  &  &  &  &  &  \\ 
+		&  & (0.513) &  &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1992) &  &  & $-$0.064 &  &  &  &  &  \\ 
+		&  &  & (0.513) &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1993) &  &  &  & $-$0.057 &  &  &  &  \\ 
+		&  &  &  & (0.513) &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2012) &  &  &  &  & $-$0.066 &  &  &  \\ 
+		&  &  &  &  & (0.513) &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2013) &  &  &  &  &  & $-$0.062 &  &  \\ 
+		&  &  &  &  &  & (0.513) &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2014) &  &  &  &  &  &  & $-$0.049 &  \\ 
+		&  &  &  &  &  &  & (0.513) &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2015) &  &  &  &  &  &  &  & $-$0.167 \\ 
+		&  &  &  &  &  &  &  & (0.509) \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1990) X Career Tie & 0.057 &  &  &  &  &  &  &  \\ 
+		& (0.255) &  &  &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1991) X Career Tie &  & 0.089 &  &  &  &  &  &  \\ 
+		&  & (0.253) &  &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1992) X Career Tie &  &  & 0.120 &  &  &  &  &  \\ 
+		&  &  & (0.257) &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1993) X Career Tie &  &  &  & 0.070 &  &  &  &  \\ 
+		&  &  &  & (0.257) &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2012) X Career Tie &  &  &  &  & 0.134 &  &  &  \\ 
+		&  &  &  &  & (0.269) &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2013) X Career Tie &  &  &  &  &  & 0.106 &  &  \\ 
+		&  &  &  &  &  & (0.264) &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2014) X Career Tie &  &  &  &  &  &  & 0.019 &  \\ 
+		&  &  &  &  &  &  & (0.263) &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2015) X Career Tie &  &  &  &  &  &  &  & $-$0.123 \\ 
+		&  &  &  &  &  &  &  & (0.259) \\ 
+		& & & & & & & & \\ 
+		Constant & $-$0.945$^{*}$ & $-$0.944$^{*}$ & $-$0.943$^{*}$ & $-$0.945$^{*}$ & $-$0.943$^{*}$ & $-$0.944$^{*}$ & $-$0.946$^{*}$ & $-$0.951$^{*}$ \\ 
+		& (0.468) & (0.468) & (0.468) & (0.468) & (0.468) & (0.468) & (0.468) & (0.469) \\ 
+		& & & & & & & & \\ 
+		\hline \\[-1.8ex] 
+		Individual fixed effects & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\ 
+		Year fixed effects & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\ 
+		Observations & 4,786 & 4,786 & 4,786 & 4,786 & 4,786 & 4,786 & 4,786 & 4,786 \\ 
+		Log Likelihood & $-$2,786.901 & $-$2,786.864 & $-$2,786.817 & $-$2,786.889 & $-$2,786.803 & $-$2,786.846 & $-$2,786.924 & $-$2,786.814 \\ 
+		Akaike Inf. Crit. & 5,663.803 & 5,663.729 & 5,663.634 & 5,663.779 & 5,663.605 & 5,663.692 & 5,663.848 & 5,663.628 \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{8}{r}{Standard errors clustered by individual. $^{+}$p$<$0.1; $^{*}$p$<$0.05; $^{**}$p$<$0.01}} \\ 
+\end{tabular} 
+\end{table} 
+
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Sun, Apr 02, 2023 - 13:08:35
+\begin{table}[!htbp] \centering 
+	\caption{Alternative Explanatory Variable: Exclusion of individual years counted as a year of domestic threat. For legibility, domestic threat coefficients are not shown.} 
+	\label{}
+	\rmfamily
+	\scriptsize  
+	\begin{tabular}{@{\extracolsep{5pt}}lcccccccc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{8}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-9} 
+		\\[-1.8ex] & \multicolumn{8}{c}{Promoted to Central military Commission} \\ 
+		\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8)\\ 
+		\hline \\[-1.8ex] 
+		Career Tie to Current CMC Chair & 0.060$^{+}$ & 0.062$^{+}$ & 0.060$^{+}$ & 0.061$^{+}$ & 0.060$^{+}$ & 0.056$^{+}$ & 0.060$^{+}$ & 0.068$^{*}$ \\ 
+		& (0.033) & (0.033) & (0.033) & (0.034) & (0.031) & (0.032) & (0.032) & (0.033) \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1990) & 0.999$^{**}$ &  &  &  &  &  &  &  \\ 
+		& (0.059) &  &  &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1991) &  & 1.001$^{**}$ &  &  &  &  &  &  \\ 
+		&  & (0.059) &  &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1992) &  &  & 0.999$^{**}$ &  &  &  &  &  \\ 
+		&  &  & (0.060) &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1993) &  &  &  & 1.000$^{**}$ &  &  &  &  \\ 
+		&  &  &  & (0.060) &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2012) &  &  &  &  & 0.996$^{**}$ &  &  &  \\ 
+		&  &  &  &  & (0.059) &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2013) &  &  &  &  &  & 0.997$^{**}$ &  &  \\ 
+		&  &  &  &  &  & (0.059) &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2014) &  &  &  &  &  &  & 1.001$^{**}$ &  \\ 
+		&  &  &  &  &  &  & (0.059) &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2015) &  &  &  &  &  &  &  & 0.984$^{**}$ \\ 
+		&  &  &  &  &  &  &  & (0.058) \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1990) X Career Tie & 0.116$^{**}$ &  &  &  &  &  &  &  \\ 
+		& (0.037) &  &  &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1991) X Career Tie &  & 0.107$^{**}$ &  &  &  &  &  &  \\ 
+		&  & (0.037) &  &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1992) X Career Tie &  &  & 0.111$^{**}$ &  &  &  &  &  \\ 
+		&  &  & (0.039) &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1993) X Career Tie &  &  &  & 0.105$^{**}$ &  &  &  &  \\ 
+		&  &  &  & (0.041) &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2012) X Career Tie &  &  &  &  & 0.134$^{**}$ &  &  &  \\ 
+		&  &  &  &  & (0.035) &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2013) X Career Tie &  &  &  &  &  & 0.130$^{**}$ &  &  \\ 
+		&  &  &  &  &  & (0.035) &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2014) X Career Tie &  &  &  &  &  &  & 0.115$^{**}$ &  \\ 
+		&  &  &  &  &  &  & (0.036) &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2015) X Career Tie &  &  &  &  &  &  &  & 0.089$^{*}$ \\ 
+		&  &  &  &  &  &  &  & (0.039) \\ 
+		& & & & & & & & \\ 
+		\hline \\[-1.8ex] 
+		Individual fixed effects & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\ 
+		Year fixed effects & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\ 
+		Observations & 4,786 & 4,786 & 4,786 & 4,786 & 4,786 & 4,786 & 4,786 & 4,786 \\ 
+		R$^{2}$ & 0.222 & 0.222 & 0.222 & 0.221 & 0.223 & 0.223 & 0.222 & 0.221 \\ 
+		Adjusted R$^{2}$ & 0.074 & 0.074 & 0.074 & 0.073 & 0.075 & 0.075 & 0.074 & 0.073 \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{8}{r}{Standard errors clustered by individual. $^{+}$p$<$0.1; $^{*}$p$<$0.05; $^{**}$p$<$0.01}} \\ 
+\end{tabular}
+\end{table} 
+
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Sun, Apr 02, 2023 - 15:31:45
+\begin{table}[!htbp] \centering 
+	\caption{glm, Alternative Explanatory Variable: Exclusion of individual years counted as a year of domestic threat. For legibility, domestic threat coefficients are not shown.} 
+	\label{table_a16}
+	\rmfamily
+	\scriptsize
+	\begin{tabular}{@{\extracolsep{5pt}}lcccccccc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{8}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-9} 
+		\\[-1.8ex] & \multicolumn{8}{c}{Promoted to Central military Commission} \\ 
+		\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8)\\ 
+		\hline \\[-1.8ex] 
+		Career Tie to Current CMC Chair & 1.189$^{**}$ & 1.182$^{**}$ & 1.176$^{**}$ & 1.187$^{**}$ & 1.176$^{**}$ & 1.181$^{**}$ & 1.198$^{**}$ & 1.228$^{**}$ \\ 
+		& (0.120) & (0.120) & (0.120) & (0.120) & (0.118) & (0.119) & (0.119) & (0.120) \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1990) & $-$0.055 &  &  &  &  &  &  &  \\ 
+		& (0.513) &  &  &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1991) &  & $-$0.059 &  &  &  &  &  &  \\ 
+		&  & (0.513) &  &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1992) &  &  & $-$0.064 &  &  &  &  &  \\ 
+		&  &  & (0.513) &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1993) &  &  &  & $-$0.057 &  &  &  &  \\ 
+		&  &  &  & (0.513) &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2012) &  &  &  &  & $-$0.066 &  &  &  \\ 
+		&  &  &  &  & (0.513) &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2013) &  &  &  &  &  & $-$0.062 &  &  \\ 
+		&  &  &  &  &  & (0.513) &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2014) &  &  &  &  &  &  & $-$0.049 &  \\ 
+		&  &  &  &  &  &  & (0.513) &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2015) &  &  &  &  &  &  &  & $-$0.167 \\ 
+		&  &  &  &  &  &  &  & (0.509) \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1990) X Career Tie & 0.057 &  &  &  &  &  &  &  \\ 
+		& (0.255) &  &  &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1991) X Career Tie &  & 0.089 &  &  &  &  &  &  \\ 
+		&  & (0.253) &  &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1992) X Career Tie &  &  & 0.120 &  &  &  &  &  \\ 
+		&  &  & (0.257) &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 1993) X Career Tie &  &  &  & 0.070 &  &  &  &  \\ 
+		&  &  &  & (0.257) &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2012) X Career Tie &  &  &  &  & 0.134 &  &  &  \\ 
+		&  &  &  &  & (0.269) &  &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2013) X Career Tie &  &  &  &  &  & 0.106 &  &  \\ 
+		&  &  &  &  &  & (0.264) &  &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2014) X Career Tie &  &  &  &  &  &  & 0.019 &  \\ 
+		&  &  &  &  &  &  & (0.263) &  \\ 
+		& & & & & & & & \\ 
+		Domestic Threat (Excluding 2015) X Career Tie &  &  &  &  &  &  &  & $-$0.123 \\ 
+		&  &  &  &  &  &  &  & (0.259) \\ 
+		& & & & & & & & \\ 
+		\hline \\[-1.8ex] 
+		Individual fixed effects & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\ 
+		Year fixed effects & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\ 
+		Observations & 4,786 & 4,786 & 4,786 & 4,786 & 4,786 & 4,786 & 4,786 & 4,786 \\ 
+		Log Likelihood & $-$2,786.901 & $-$2,786.864 & $-$2,786.817 & $-$2,786.889 & $-$2,786.803 & $-$2,786.846 & $-$2,786.924 & $-$2,786.814 \\ 
+		Akaike Inf. Crit. & 5,663.803 & 5,663.729 & 5,663.634 & 5,663.779 & 5,663.605 & 5,663.692 & 5,663.848 & 5,663.628 \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{8}{r}{Standard errors clustered by individual. $^{+}$p$<$0.1; $^{*}$p$<$0.05; $^{**}$p$<$0.01}} \\ 
+\end{tabular} 
 \end{table} 
 
 % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
-% Date and time: Sat, Apr 01, 2023 - 21:04:30
+% Date and time: Sun, Apr 02, 2023 - 16:39:27
 \begin{table}[!htbp] \centering 
-	\caption{} 
-	\label{} 
-	\begin{tabular}{@{\extracolsep{5pt}} c} 
+	\caption{Cross-Sectional Measure of Promotion to General by CMC Chairman, Restricted to Generals Eligible For Promotion During Each Chairmans' Term.} 
+	\label{table_a18} 
+	\begin{tabular}{@{\extracolsep{5pt}}lcccccccc} 
 		\\[-1.8ex]\hline 
 		\hline \\[-1.8ex] 
-		Domestic threat, general promotion \\ 
+		& \multicolumn{8}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-9} 
+		\\[-1.8ex] & \multicolumn{2}{c}{Promoted to General (Deng)} & \multicolumn{2}{c}{Promoted to General (Jiang)} & \multicolumn{2}{c}{Promoted to General (Hu)} & \multicolumn{2}{c}{Promoted to General (Xi)} \\ 
+		\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8)\\ 
 		\hline \\[-1.8ex] 
-	\end{tabular} 
+		Career Tie to Deng Xiaoping & 0.203$^{**}$ & 0.185$^{**}$ &  &  &  &  &  &  \\ 
+		& (0.040) & (0.043) &  &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Career Tie to Jiang Zemin &  &  & 0.034 & 0.061 &  &  &  &  \\ 
+		&  &  & (0.112) & (0.110) &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Career Tie to Hu Jintao &  &  &  &  & 0.090 & $-$0.062 &  &  \\ 
+		&  &  &  &  & (0.251) & (0.238) &  &  \\ 
+		& & & & & & & & \\ 
+		Career Tie to Xi Jinping &  &  &  &  &  &  & 0.266$^{**}$ & 0.265$^{**}$ \\ 
+		&  &  &  &  &  &  & (0.097) & (0.097) \\ 
+		& & & & & & & & \\ 
+		Constant & 0.024 & $-$0.228$^{*}$ & 0.232$^{**}$ & $-$0.226 & 0.244$^{**}$ & $-$0.161 & 0.119$^{**}$ & $-$0.155 \\ 
+		& (0.018) & (0.092) & (0.025) & (0.323) & (0.031) & (0.413) & (0.025) & (0.140) \\ 
+		& & & & & & & & \\ 
+		\hline \\[-1.8ex] 
+		Observations & 209 & 207 & 312 & 308 & 200 & 200 & 190 & 187 \\ 
+		R$^{2}$ & 0.110 & 0.198 & 0.0003 & 0.141 & 0.001 & 0.166 & 0.038 & 0.162 \\ 
+		Adjusted R$^{2}$ & 0.105 & 0.144 & $-$0.003 & 0.100 & $-$0.004 & 0.122 & 0.033 & 0.114 \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{8}{r}{$^{+}$p$<$0.1; $^{*}$p$<$0.05; $^{**}$p$<$0.01}} \\ 
+\end{tabular} 
+\end{table} 
+
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Sun, Apr 02, 2023 - 16:43:17
+\begin{table}[!htbp] \centering 
+	\caption{Cross-Sectional Measure of Promotion to CMC by CMC Chairman, Restricted to Generals Eligible For Promotion During Each Chairmans' Term.} 
+	\label{table_a19} 
+	\begin{tabular}{@{\extracolsep{5pt}}lcccccccc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{8}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-9} 
+		\\[-1.8ex] & \multicolumn{2}{c}{Promoted to CMC (Deng)} & \multicolumn{2}{c}{Promoted to CMC (Jiang)} & \multicolumn{2}{c}{Promoted to CMC (Hu)} & \multicolumn{2}{c}{Promoted to CMC (Xi)} \\ 
+		\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8)\\ 
+		\hline \\[-1.8ex] 
+		Career Tie to Deng Xiaoping & 0.480$^{**}$ & 0.075$^{*}$ &  &  &  &  &  &  \\ 
+		& (0.043) & (0.030) &  &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Career Tie to Jiang Zemin &  &  & 0.019 & 0.029 &  &  &  &  \\ 
+		&  &  & (0.057) & (0.054) &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Career Tie to Hu Jintao &  &  &  &  & $-$0.046 & $-$0.098 &  &  \\ 
+		&  &  &  &  & (0.149) & (0.140) &  &  \\ 
+		& & & & & & & & \\ 
+		Career Tie to Xi Jinping &  &  &  &  &  &  & 0.351$^{**}$ & 0.288$^{**}$ \\ 
+		&  &  &  &  &  &  & (0.063) & (0.059) \\ 
+		& & & & & & & & \\ 
+		Constant & 0.020$^{+}$ & 0.558$^{**}$ & 0.047$^{**}$ & $-$0.145 & 0.046$^{**}$ & 0.991$^{**}$ & 0.034$^{*}$ & 0.373$^{**}$ \\ 
+		& (0.010) & (0.048) & (0.012) & (0.157) & (0.016) & (0.197) & (0.016) & (0.085) \\ 
+		& & & & & & & & \\ 
+		\hline \\[-1.8ex] 
+		Control variables &  & $\checkmark$ &  & $\checkmark$ &  & $\checkmark$ &  & $\checkmark$ \\ 
+		Observations & 325 & 321 & 311 & 307 & 177 & 177 & 189 & 186 \\ 
+		R$^{2}$ & 0.274 & 0.806 & 0.0004 & 0.204 & 0.001 & 0.194 & 0.144 & 0.329 \\ 
+		Adjusted R$^{2}$ & 0.272 & 0.797 & $-$0.003 & 0.166 & $-$0.005 & 0.146 & 0.139 & 0.291 \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{8}{r}{$^{+}$p$<$0.1; $^{*}$p$<$0.05; $^{**}$p$<$0.01}} \\ 
+\end{tabular} 
+\end{table} 
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Sun, Apr 02, 2023 - 16:55:27
+\begin{table}[!htbp] \centering 
+	\caption{Logistic Regression, Main Table: Promotion to full general and to the CCP Central Military Commission} 
+	\label{table_a8} 
+	\begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-7} 
+		\\[-1.8ex] & \multicolumn{3}{c}{Promoted to General} & \multicolumn{3}{c}{Promoted to CMC} \\ 
+		\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+		\hline \\[-1.8ex] 
+		Career Tie to Paramount Leader & 0.946$^{**}$ &  & 0.751$^{**}$ & 1.793$^{**}$ &  & 1.619$^{**}$ \\ 
+		& (0.208) &  & (0.246) & (0.291) &  & (0.385) \\ 
+		& & & & & & \\ 
+		Combat Experience, Post-1949 &  & 1.543$^{**}$ & 1.239$^{**}$ &  & 1.515$^{**}$ & 0.855$^{+}$ \\ 
+		&  & (0.223) & (0.281) &  & (0.300) & (0.450) \\ 
+		& & & & & & \\ 
+		College-Level Education &  &  & 0.879$^{**}$ &  &  & 1.135$^{*}$ \\ 
+		&  &  & (0.218) &  &  & (0.443) \\ 
+		& & & & & & \\ 
+		Long March Participant &  &  & 0.375 &  &  & 1.717$^{+}$ \\ 
+		&  &  & (0.474) &  &  & (1.025) \\ 
+		& & & & & & \\ 
+		Political Commissar Experience &  &  & 0.667$^{**}$ &  &  & $-$0.273 \\ 
+		&  &  & (0.194) &  &  & (0.374) \\ 
+		& & & & & & \\ 
+		Ethnic Minority &  &  & 0.784 &  &  & 1.273 \\ 
+		&  &  & (0.589) &  &  & (0.864) \\ 
+		& & & & & & \\ 
+		Princeling &  &  & 0.083 &  &  & $-$0.140 \\ 
+		&  &  & (0.473) &  &  & (0.845) \\ 
+		& & & & & & \\ 
+		Rural Birth &  &  & 0.383 &  &  & 1.077$^{**}$ \\ 
+		&  &  & (0.234) &  &  & (0.379) \\ 
+		& & & & & & \\ 
+		Constant & $-$1.277$^{**}$ & $-$1.284$^{**}$ & $-$1.136 & $-$3.051$^{**}$ & $-$2.852$^{**}$ & $-$3.045$^{**}$ \\ 
+		& (0.096) & (0.093) & (0.820) & (0.190) & (0.169) & (1.150) \\ 
+		& & & & & & \\ 
+		\hline \\[-1.8ex] 
+		Birth cohort fixed effects &  &  & $\checkmark$ &  &  & $\checkmark$ \\ 
+		Observations & 764 & 779 & 755 & 764 & 779 & 755 \\ 
+		Log Likelihood & $-$419.616 & $-$423.659 & $-$366.939 & $-$182.641 & $-$195.206 & $-$141.371 \\ 
+		Akaike Inf. Crit. & 843.231 & 851.317 & 763.878 & 369.282 & 394.412 & 312.741 \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{6}{r}{$^{+}$p$<$0.1; $^{*}$p$<$0.05; $^{**}$p$<$0.01}} \\ 
+\end{tabular} 
+\end{table} 
+
+
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Sun, Apr 02, 2023 - 16:57:37
+\begin{table}[!htbp] \centering 
+	\caption{Logistic Regression, Alternate Table: Promotion to CCP Central Committee} 
+	\label{table_a9} 
+	\begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-7} 
+		\\[-1.8ex] & \multicolumn{3}{c}{Central Committee Full Member} & \multicolumn{3}{c}{Central Committee Full or Alternate Member} \\ 
+		\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+		\hline \\[-1.8ex] 
+		Career Tie to Paramount Leader & 0.715$^{**}$ &  & 0.593$^{*}$ & 0.562$^{**}$ &  & 0.513$^{*}$ \\ 
+		& (0.220) &  & (0.248) & (0.208) &  & (0.239) \\ 
+		& & & & & & \\ 
+		Combat Experience, Post-1949 &  & 1.279$^{**}$ & 1.024$^{**}$ &  & 1.085$^{**}$ & 0.978$^{**}$ \\ 
+		&  & (0.224) & (0.288) &  & (0.219) & (0.274) \\ 
+		& & & & & & \\ 
+		College-Level Education &  &  & 0.992$^{**}$ &  &  & 1.224$^{**}$ \\ 
+		&  &  & (0.236) &  &  & (0.213) \\ 
+		& & & & & & \\ 
+		Long March Participant &  &  & $-$0.328 &  &  & 0.047 \\ 
+		&  &  & (0.482) &  &  & (0.487) \\ 
+		& & & & & & \\ 
+		Political Commissar Experience &  &  & 0.379$^{+}$ &  &  & 0.108 \\ 
+		&  &  & (0.198) &  &  & (0.180) \\ 
+		& & & & & & \\ 
+		Ethnic Minority &  &  & 0.469 &  &  & 0.339 \\ 
+		&  &  & (0.617) &  &  & (0.626) \\ 
+		& & & & & & \\ 
+		Princeling &  &  & 0.241 &  &  & 0.131 \\ 
+		&  &  & (0.482) &  &  & (0.467) \\ 
+		& & & & & & \\ 
+		Rural Birth &  &  & 0.197 &  &  & $-$0.152 \\ 
+		&  &  & (0.251) &  &  & (0.239) \\ 
+		& & & & & & \\ 
+		Constant & $-$1.470$^{**}$ & $-$1.458$^{**}$ & $-$2.711$^{**}$ & $-$1.029$^{**}$ & $-$1.025$^{**}$ & $-$2.807$^{**}$ \\ 
+		& (0.101) & (0.098) & (0.987) & (0.090) & (0.087) & (1.005) \\ 
+		& & & & & & \\ 
+		\hline \\[-1.8ex] 
+		Birth cohort fixed effects &  &  & $\checkmark$ &  &  & $\checkmark$ \\ 
+		Observations & 764 & 779 & 755 & 764 & 779 & 755 \\ 
+		Log Likelihood & $-$385.712 & $-$398.073 & $-$350.281 & $-$451.383 & $-$461.313 & $-$410.212 \\ 
+		Akaike Inf. Crit. & 775.424 & 800.147 & 730.562 & 906.765 & 926.625 & 850.424 \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{6}{r}{$^{+}$p$<$0.1; $^{*}$p$<$0.05; $^{**}$p$<$0.01}} \\ 
+\end{tabular} 
+\end{table} 
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Sun, Apr 02, 2023 - 17:13:08
+\begin{table}[!htbp] \centering 
+	\caption{Logit Regression, Cross-Sectional Measure of Promotion to General by CMC Chairman, Restricted to Generals Eligible For Promotion During Each Chairmans' Term.} 
+	\label{table_a18} 
+	\begin{tabular}{@{\extracolsep{5pt}}lcccccccc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{8}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-9} 
+		\\[-1.8ex] & \multicolumn{2}{c}{Promoted to General (Deng)} & \multicolumn{2}{c}{Promoted to General (Jiang)} & \multicolumn{2}{c}{Promoted to General (Hu)} & \multicolumn{2}{c}{Promoted to General (Xi)} \\ 
+		\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8)\\ 
+		\hline \\[-1.8ex] 
+		Career Tie to Deng Xiaoping & 2.471$^{**}$ & 2.692$^{**}$ &  &  &  &  &  &  \\ 
+		& (0.621) & (0.796) &  &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Career Tie to Jiang Zemin &  &  & 0.184 & 0.475 &  &  &  &  \\ 
+		&  &  & (0.600) & (0.672) &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Career Tie to Hu Jintao &  &  &  &  & 0.440 & $-$0.353 &  &  \\ 
+		&  &  &  &  & (1.236) & (1.252) &  &  \\ 
+		& & & & & & & & \\ 
+		Career Tie to Xi Jinping &  &  &  &  &  &  & 1.535$^{*}$ & 2.159$^{**}$ \\ 
+		&  &  &  &  &  &  & (0.616) & (0.788) \\ 
+		& & & & & & & & \\ 
+		Constant & $-$3.695$^{**}$ & $-$25.688 & $-$1.195$^{**}$ & $-$19.186 & $-$1.133$^{**}$ & $-$16.660 & $-$2.005$^{**}$ & $-$21.553 \\ 
+		& (0.506) & (5,135.905) & (0.137) & (2,795.266) & (0.166) & (1,455.398) & (0.232) & (3,982.260) \\ 
+		& & & & & & & & \\ 
+		\hline \\[-1.8ex] 
+		Observations & 209 & 207 & 312 & 308 & 200 & 200 & 190 & 187 \\ 
+		Log Likelihood & $-$42.412 & $-$30.839 & $-$169.693 & $-$144.408 & $-$111.295 & $-$92.642 & $-$73.128 & $-$56.742 \\ 
+		Akaike Inf. Crit. & 88.824 & 89.678 & 343.386 & 318.816 & 226.590 & 207.285 & 150.255 & 135.483 \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{8}{r}{$^{+}$p$<$0.1; $^{*}$p$<$0.05; $^{**}$p$<$0.01}} \\ 
+\end{tabular} 
+\end{table} 
+
+
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Sun, Apr 02, 2023 - 17:44:25
+\begin{table}[!htbp] \centering 
+	\caption{logit regression Cross-Sectional Measure of Promotion to CMC by CMC Chairman, Restricted to Generals Eligible For Promotion During Each Chairmans' Term.} 
+	\label{table_a19} 
+	\begin{tabular}{@{\extracolsep{5pt}}lcccccccc} 
+		\\[-1.8ex]\hline 
+		\hline \\[-1.8ex] 
+		& \multicolumn{8}{c}{\textit{Dependent variable:}} \\ 
+		\cline{2-9} 
+		\\[-1.8ex] & \multicolumn{2}{c}{Promoted to CMC (Deng)} & \multicolumn{2}{c}{Promoted to CMC (Jiang)} & \multicolumn{2}{c}{Promoted to CMC (Hu)} & \multicolumn{2}{c}{Promoted to CMC (Xi)} \\ 
+		\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8)\\ 
+		\hline \\[-1.8ex] 
+		Career Tie to Deng Xiaoping & 3.915$^{**}$ & 21.346 &  &  &  &  &  &  \\ 
+		& (0.626) & (24,859.740) &  &  &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Career Tie to Jiang Zemin &  &  & 0.364 & 0.747 &  &  &  &  \\ 
+		&  &  & (1.071) & (1.297) &  &  &  &  \\ 
+		& & & & & & & & \\ 
+		Career Tie to Hu Jintao &  &  &  &  & $-$13.528 & $-$18.893 &  &  \\ 
+		&  &  &  &  & (1,696.734) & (12,531.920) &  &  \\ 
+		& & & & & & & & \\ 
+		Career Tie to Xi Jinping &  &  &  &  &  &  & 2.874$^{**}$ & 3.511$^{**}$ \\ 
+		&  &  &  &  &  &  & (0.705) & (1.091) \\ 
+		& & & & & & & & \\ 
+		Constant & $-$3.915$^{**}$ & 7.095 & $-$3.003$^{**}$ & $-$21.648 & $-$3.039$^{**}$ & 4.584 & $-$3.344$^{**}$ & $-$2.832$^{+}$ \\ 
+		& (0.412) & (308,115.800) & (0.274) & (7,025.609) & (0.362) & (17,849.010) & (0.415) & (1.572) \\ 
+		& & & & & & & & \\ 
+		\hline \\[-1.8ex] 
+		Control variables &  & $\checkmark$ &  & $\checkmark$ &  & $\checkmark$ &  & $\checkmark$ \\ 
+		Observations & 325 & 321 & 311 & 307 & 177 & 177 & 189 & 186 \\ 
+		Log Likelihood & $-$42.028 & $-$0.000 & $-$60.056 & $-$44.017 & $-$32.497 & $-$21.875 & $-$34.831 & $-$20.063 \\ 
+		Akaike Inf. Crit. & 88.056 & 30.000 & 124.112 & 118.033 & 68.994 & 65.750 & 73.661 & 62.126 \\ 
+		\hline 
+		\hline \\[-1.8ex] 
+		\textit{Note:}  & \multicolumn{8}{r}{$^{+}$p$<$0.1; $^{*}$p$<$0.05; $^{**}$p$<$0.01}} \\ 
+\end{tabular} 
 \end{table} 
 
 
