@@ -1902,37 +1902,52 @@ summary(glm_int_cmc_mr)
 stargazer(glm_int_cmc_mr, title = "logit model, interaction: cmc")
 
 
-
+test <- anova(glm_cmc, glm_int_cmc_mr, test="LRT")
+test
+stargazer(test, title="Test: Interactive Model or not, cmc, minority : rural")
 
 
 
 
 
 ## additive model: general promotion 
-glm_general <- glm(general~cmc_chair_connection_current+combat_post_1949
+glm_gen <- glm(general~cmc_chair_connection_current+combat_post_1949
                    +college+participated_long_march+commissar+minority+
                      parent_CCP_leader+rural+cohort_decade, data=bio, family=binomial(link="logit"))
-summary(glm_general)
-stargazer(glm_general, titile = "logit model, additive: general")
+summary(glm_gen)
+stargazer(glm_gen, titile = "logit model, additive: general")
+
 
 
 
 ## interaction model (minority : rural): general promotion 
-glm_int_general <- glm(general~cmc_chair_connection_current+combat_post_1949
+glm_int_gen_mr <- glm(general~cmc_chair_connection_current+combat_post_1949
                        +college+participated_long_march+commissar+minority+
                          parent_CCP_leader+rural+cohort_decade + 
                          minority : rural, data=bio, family=binomial(link="logit"))
-summary(glm_int_general)
-stargazer(glm_int_general, titile = "logit model (minority : rural), additive: general")
+summary(glm_int_gen_mr)
+stargazer(glm_int_gen_mr, titile = "logit model (minority : rural), additive: general")
+
+test <- anova(glm_gen, glm_int_gen_mr, test="LRT")
+test
+stargazer(test, title="Test: Interactive Model or not, general, minority : rural")
+
 
 
 ## interaction model (combat_post_1949 : commissar): general promotion
-glm_int_cmc_cc <- glm(general~cmc_chair_connection_current+combat_post_1949
+glm_int_gen_cc <- glm(general~cmc_chair_connection_current+combat_post_1949
                       +college+participated_long_march+commissar+minority+
                         parent_CCP_leader+rural+cohort_decade + 
                         combat_post_1949 : commissar, data=bio, family=binomial(link="logit"))
-summary(glm_int_cmc_cc)
-stargazer(glm_int_cmc_cc, title = "logit model, interaction (combat_post_1949 : commissar): general")
+summary(glm_int_gen_cc)
+stargazer(glm_int_gen_cc, title = "logit model, interaction (combat_post_1949 : commissar): general")
+
+
+test <- anova(glm_gen, glm_int_gen_cc, test="LRT")
+test
+stargazer(test, title="Test: Interactive Model or not, general, combat : commissar")
+
+
 
 
 ## interaction model (combat_post_1949 : commissar): cmc promotion
@@ -1943,6 +1958,12 @@ glm_int_cmc_cc <- glm(cmc~cmc_chair_connection_current+combat_post_1949
 summary(glm_int_cmc_cc)
 stargazer(glm_int_cmc_cc, title = "logit model, interaction (combat_post_1949 : commissar): cmc")
 
+test <- anova(glm_cmc, glm_int_cmc_cc, test="LRT")
+test
+stargazer(test, title="Test: Interactive Model or not, cmc, combat : commissar")
+
+
+
 
 ## interaction model (minority: commissar): general promotion
 glm_int_gen_mc <- glm(general~cmc_chair_connection_current+combat_post_1949
@@ -1951,6 +1972,11 @@ glm_int_gen_mc <- glm(general~cmc_chair_connection_current+combat_post_1949
                         minority : commissar, data=bio, family=binomial(link="logit"))
 summary(glm_int_gen_mc)
 stargazer(glm_int_gen_mc, title = "logit model, interaction (minority : commissar): general")
+
+test <- anova(glm_gen, glm_int_gen_mc, test="LRT")
+test
+stargazer(test, title="Test: Interactive Model or not, general, minority : commissar")
+
 
 
 ## interaction model (minority: commissar): cmc promotion
@@ -1963,7 +1989,9 @@ stargazer(glm_int_cmc_mc, title = "logit model, interaction (minority : commissa
 
 
 
-
+test <- anova(glm_cmc, glm_int_cmc_mc, test="LRT")
+test
+stargazer(test, title="Test: Interactive Model or not, cmc, minority : commissar")
 
 ##Appendix: Subset to post-Deng Era, glm model, by Caesar
 
