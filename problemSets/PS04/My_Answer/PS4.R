@@ -4,10 +4,10 @@ library(survival)
 library(stargazer)
 
 ## Import Data 
-data(infants)
+data(child)
 
 ## Coz-Harzard 
-add_surv <- coxph(Surv(enter, exit, event) ~ age + sex, data = infants)
+add_surv <- coxph(Surv(enter, exit, event) ~ m.age + sex, data = child)
 summary(add_surv)
-stargazer(add_surv, title = "Infants Survivial")
+stargazer(add_surv, title = "Child Survivial")
 

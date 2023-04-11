@@ -78,14 +78,14 @@
 	\vspace{.25cm}
 \section*{Question 1}
 \vspace{.25cm}
-\noindent We're interested in modeling the historical causes of infant mortality. We have data from 5641 first-born in seven Swedish parishes 1820-1895. Using the "infants" dataset in the \texttt{eha} library, fit a Cox Proportional Hazard model using mother's age and infant's gender as covariates. Present and interpret the output.
+\noindent We’re interested in modeling the historical causes of child mortality. We have data from 26855 children born in Skellefte˚a, Sweden from 1850 to 1884. Using the ”child” dataset in the eha library, fit a Cox Proportional Hazard model using mother’s age and infant’s gender as covariates. Present and interpret the output.\\
 
 \lstinputlisting[language=R, firstline=6, lastline=12]{PS4.R}
 
 % Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
-% Date and time: Mon, Apr 03, 2023 - 15:46:11
+% Date and time: Tue, Apr 11, 2023 - 14:43:10
 \begin{table}[!htbp] \centering 
-	\caption{Infants Survivial} 
+	\caption{Child Survivial} 
 	\label{} 
 	\begin{tabular}{@{\extracolsep{5pt}}lc} 
 		\\[-1.8ex]\hline 
@@ -94,20 +94,20 @@
 		\cline{2-2} 
 		\\[-1.8ex] & enter \\ 
 		\hline \\[-1.8ex] 
-		age & $-$0.040 \\ 
-		& (0.045) \\ 
+		m.age & 0.008$^{***}$ \\ 
+		& (0.002) \\ 
 		& \\ 
-		sexboy & $-$0.485 \\ 
-		& (0.442) \\ 
+		sexfemale & $-$0.082$^{***}$ \\ 
+		& (0.027) \\ 
 		& \\ 
 		\hline \\[-1.8ex] 
-		Observations & 105 \\ 
-		R$^{2}$ & 0.019 \\ 
-		Max. Possible R$^{2}$ & 0.800 \\ 
-		Log Likelihood & $-$83.626 \\ 
-		Wald Test & 2.000 (df = 2) \\ 
-		LR Test & 1.992 (df = 2) \\ 
-		Score (Logrank) Test & 2.034 (df = 2) \\ 
+		Observations & 26,574 \\ 
+		R$^{2}$ & 0.001 \\ 
+		Max. Possible R$^{2}$ & 0.986 \\ 
+		Log Likelihood & $-$56,503.480 \\ 
+		Wald Test & 22.520$^{***}$ (df = 2) \\ 
+		LR Test & 22.518$^{***}$ (df = 2) \\ 
+		Score (Logrank) Test & 22.530$^{***}$ (df = 2) \\ 
 		\hline 
 		\hline \\[-1.8ex] 
 		\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
@@ -116,10 +116,10 @@
 
 
 Interpretation:\\
-Holding other covariates constant, when mother's age increases by 1 year, the log hazard of infant death decreases by 0.040.
+Holding other covariates constant, when mother's age increases by 1 year, the log hazard of children's death increases by 0.008 on average.
 
 
-Holding other covariates constant, when the gender of infants moves from the category of female to male, the log hazard of death decrease by 0.485.
+Holding other covariates constant, when the gender of infants moves from the category of male to female, the log hazard of children's death decrease by 0.082 on average.
 
 
 \end{document}
